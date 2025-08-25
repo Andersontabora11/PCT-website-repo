@@ -1,0 +1,219 @@
+/* <----- Nationals PAGE -----> */
+.nationals-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    color: white; /* White text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for better readability */
+    text-align: center;
+    padding: 0 1rem;
+    background-image: url('Web Images/Nations\ page\ pic.png');
+}
+
+.nationals-section h1 {
+    font-size: 4rem;
+    margin-bottom: 0rem;
+    font-weight: 600;
+}
+
+
+.history-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 60vh;
+    height: auto;
+}
+
+ .history-container {
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    gap: 2rem;
+    padding: 20px 40px;
+    /* background-color: red;  */
+}
+
+.history-section h3{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+.crest-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* width:%; */
+    /* background: blue; */
+}
+
+.crest-container img {
+    width: 200px;
+    height: auto;
+    margin-left: 20px;
+    
+}
+
+.history-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center;
+    /* background: red; */
+}
+
+#nationals-link{
+    color: black; /* Black text */
+    text-decoration: underline;
+}
+
+
+/* Alumni stats section */
+
+.nationals-alumni-stats{
+    gap: clamp(12px, 2.5vw, 24px);
+    margin-bottom: 1rem; 
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    padding: 2rem clamp(12px, 3vw, 32px);
+  max-width: 1100px;           /* cap width so cards don't sprawl */
+  margin-inline: auto;
+    
+}
+
+.nationals-alumni-stats .alumni-stat-container{
+    display: grid;
+    place-items: center;
+    min-height: 160px;
+    height: 100%;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    background-color: #390f64; /* White background for stats */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.nationals-alumni-stats .alumni-stat-container h3 {
+    font-size: .8rem;
+    margin-bottom: 0.5rem;
+}
+
+.nationals-alumni-stats .alumni-stat-container h1 {
+    font-size: 3rem;
+    margin-bottom: .5rem;
+    font-variant-numeric: tabular-nums; 
+    font-feature-settings: 'tnum' 1;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .nationals-alumni-stats {
+    --g: 16px;
+    gap: var(--g);
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 columns */
+  }
+  .nationals-alumni-stats .alumni-stat-container{
+    min-height: 150px;
+    padding: 16px;
+  }
+  .nationals-alumni-stats .alumni-stat-container h1 {
+    font-size: clamp(1.75rem, 4.8vw, 2.25rem);
+  }
+  .nationals-alumni-stats .alumni-stat-container h3 {
+    font-size: clamp(.85rem, 2.6vw, 1rem);
+  }
+}
+
+/* Phones: 2-up, then 1-up on very small screens */
+@media (max-width: 768px) {
+  .nationals-alumni-stats {
+    gap: 1.5rem;
+    padding: 1.25rem 1rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr)); /* 2 columns */
+    justify-items: center;
+  }
+  .nationals-alumni-stats .alumni-stat-container{
+    min-height: 130px;
+    padding: 14px;
+    border-radius: 8px;
+    min-width: 0;
+    width: 400px;
+  }
+  .nationals-alumni-stats .alumni-stat-container h1 {
+    font-size: clamp(1.25rem, 4.2vw, 1.75rem);
+  }
+  .nationals-alumni-stats .alumni-stat-container h3 {
+    font-size: clamp(0.7rem, 2.6vw, 0.9rem);
+  }
+
+  .history-container {
+    display: flex;                          /* ensure flex on mobile */
+    flex-direction: column;                 /* stack vertically */
+    align-items: center;
+    gap: 1rem;
+    text-align: left;                       /* keep paragraph left-aligned */
+  }
+  .crest-container {
+    order: -1;                              /* image first (on top) */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .pct-crest {
+    margin-left: 0;
+    max-width: clamp(160px, 50vw, 260px);   /* sensible mobile size */
+    height: auto;
+    display: block;
+  }
+  .history-section h3 {
+    font-size: clamp(1rem, 4.5vw, 1.25rem);
+    text-align: center;                     /* headline centered looks nicer */
+    margin-bottom: .5rem;
+  }
+}
+
+
+
+@media (max-width: 420px) {
+  .nationals-alumni-stats {
+    grid-template-columns: 1fr;           /* 1 column on tiny phones */
+  }
+}
+
+
+ 
+
+
+
+
+
+.region-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+
+}
+
+.region-section img{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+
