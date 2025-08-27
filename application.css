@@ -1,0 +1,93 @@
+/* Styles for Application page */
+
+.application-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 70vh;
+    background-size: cover;
+    background-position: center 40%;
+    background-attachment: fixed; 
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.application-section h1 {
+    font-size: 3.2rem;
+    margin-bottom: 0rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+}
+
+.application-intro {
+    margin-top: 2rem;
+    padding: 2rem 3rem;
+    background: rgba(255,255,255,0.92);
+    border-radius: 32px;
+    max-width: 700px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    animation: pull-in 0.7s cubic-bezier(.6,-0.28,.74,.05) 0.1s forwards;
+    transition: box-shadow 0.3s;
+}
+
+.application-intro:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+@keyframes pull-in {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.application-intro .bold {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.application-intro button {
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    padding: 1rem 2.5rem;
+    min-width: 180px;
+    cursor: pointer;
+    margin-right: 1.5rem;
+    margin-bottom: 0.5rem;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.application-intro button:last-child {
+    margin-right: 0;
+}
+
+.application-intro .gray-btn {
+    background: #888;
+    color: #fff;
+}
+
+.application-intro .purple-btn {
+    background: #6a1fae;
+    color: #fff;
+}
+
+.application-intro .contact {
+    margin-top: 1.5rem;
+    font-size: 1.15rem;
+}
+.application-intro .contact span {
+    font-weight: bold;
+}
