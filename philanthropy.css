@@ -27,14 +27,19 @@
 
 .feature-image img {
     width: 320px;
-    height: auto;
+    height: 320px;
     border-radius: 18px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    object-fit: cover;
+    object-position: center 90%;
 }
 
 .feature-text {
     flex: 1;
     text-align: left;
+}
+.feature-text span[style*="font-weight: bold;"] {
+    font-size: 1.25rem;
 }
 .feature-text h3 {
     font-size: 2rem;
@@ -63,7 +68,7 @@
     position: relative;
     height: 70vh;
     background-size: cover;
-    background-position: center 70%;
+    background-position: center 55%;
     background-attachment: fixed; 
     color: white; /* White text */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for better readability */
