@@ -1,0 +1,190 @@
+.rush-intro:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+/* Styles for Rush Info page */
+
+.rush-header-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 70vh;
+    background-size: cover;
+    background-position: center 55%;
+    background-attachment: fixed; 
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.rush-header-section h1 {
+    font-size: 3.2rem;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+}
+
+.rush-intro {
+    margin-top: 3.5rem;
+    padding: 2rem 3rem;
+    background: rgba(255,255,255,0.92);
+    border-radius: 32px;
+    max-width: 900px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.2rem;
+    opacity: 1;
+    transform: none;
+    animation: none;
+    transition: none;
+}
+
+
+@keyframes pull-in {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.rush-big-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.rush-description {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 2.2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rush-purple-btn {
+    display: inline-block;
+    background: #6a1fae;
+    color: #fff;
+    border-radius: 14px;
+    padding: 1rem 2.2rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 2.2rem;
+    transition: background 0.2s;
+}
+
+.rush-purple-btn:hover {
+    background: #4d1580;
+}
+
+.rush-testimonials {
+    max-width: 900px;
+    margin: 0 auto 4.5rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.rush-testimonial-row {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 1.2rem 2.5rem;
+}
+
+
+.rush-testimonial-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.rush-testimonial-row.no-bg {
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 2rem 2.5rem;
+}
+
+.rush-testimonial-img {
+    flex: 0 0 216px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rush-headshot {
+    width: 216px;
+    height: 216px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+
+.rush-testimonial-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.rush-testimonial-text.right-align {
+    align-items: flex-end;
+    text-align: left;
+    position: relative;
+}
+
+.rush-name.bottom-right {
+    position: static;
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+.rush-quote {
+    font-size: 1.15rem;
+    font-style: normal;
+    margin-bottom: 1.1rem;
+}
+
+.testimonial-style {
+    font-size: 1.18rem;
+    font-style: normal;
+    color: #222;
+    background: none;
+    border-left: 4px solid #6a1fae;
+    padding-left: 1.1rem;
+    margin-bottom: 0.7rem;
+    line-height: 1.5;
+}
+
+.rush-name {
+    font-size: 1.05rem;
+    color: #111;
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+    .rush-testimonial-row, .rush-testimonial-row.reverse {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.2rem 1rem;
+    }
+    .rush-testimonial-img {
+        margin-bottom: 0.5rem;
+    }
+    .rush-testimonial-text {
+        align-items: center;
+        text-align: center;
+    }
+}
