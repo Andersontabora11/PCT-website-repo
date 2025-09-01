@@ -1,0 +1,55 @@
+/* Styles for Sponsor Us page (copied and adapted from sponsors.css) */
+
+.professional-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 70vh;
+    background-size: cover;
+    background-position: center 70%;
+    background-attachment: fixed; 
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.professional-section h1 {
+    font-size: 3.2rem;
+    margin-bottom: 0rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+}
+
+.professional-intro {
+    margin-top: 2rem;
+    padding: 2rem 3rem;
+    max-width: 900px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    animation: pull-in 0.7s cubic-bezier(.6,-0.28,.74,.05) 0.1s forwards;
+    transition: box-shadow 0.3s;
+}
+
+@keyframes pull-in {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.feature-text {
+    margin: 0 auto;
+    padding: 2rem 0 0 0;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
