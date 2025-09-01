@@ -1,0 +1,120 @@
+/* Duplicate of rush-info.css with custom styles for Rush Schedule */
+.rush-header-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 70vh;
+    background-size: cover;
+    background-position: center 55%;
+    background-attachment: fixed; 
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.rush-header-section h1 {
+    font-size: 3.2rem;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+}
+
+/* Fix for .rush-schedule-intro selector */
+.rush-schedule-intro {
+    margin-top: 6rem;
+    max-width: 900px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.2rem;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+}
+
+
+.rush-schedule-universal h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 2.2rem;
+}
+
+.rush-schedule-bar {
+    background: #e0e0e0;
+    border-radius: 16px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    margin-bottom: 1.5rem;
+}
+
+.rush-schedule-bar > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rush-schedule-bar > div:first-child {
+    align-items: center;
+    padding: 2.2rem 2.2rem 2.2rem 1.2rem;
+    min-width: 120px;
+}
+
+.rush-schedule-bar > div:nth-child(2) {
+    flex: 1;
+    padding: 2.2rem 1.2rem;
+}
+
+.rush-schedule-bar > div:last-child {
+    align-items: flex-end;
+    padding: 2.2rem 2.2rem 2.2rem 1.2rem;
+    min-width: 120px;
+}
+
+.rush-schedule-bar .date-month {
+    font-weight: bold;
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+.rush-schedule-bar .date-day {
+    font-weight: bold;
+    font-size: 2.2rem;
+}
+
+.rush-schedule-bar .event-title {
+    font-weight: bold;
+    font-size: 1.35rem;
+    margin-bottom: 0.7rem;
+}
+
+.rush-schedule-bar .event-details {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+.rush-schedule-bar .event-attire {
+    font-weight: bold;
+    font-size: 1.15rem;
+}
+
+@media (max-width: 900px) {
+    .rush-header-section {
+        height: 40vh;
+    }
+    .rush-schedule-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .rush-schedule-bar > div {
+        padding: 1.2rem !important;
+        min-width: unset !important;
+    }
+}
