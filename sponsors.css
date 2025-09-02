@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* White box styling for Sponsors intro, similar to Professionalism page */
 .sponsors-white-box {
     background: rgba(255,255,255,0.92);
@@ -46,32 +47,10 @@
     box-shadow: 0 2px 16px rgba(0,0,0,0.10);
     padding: 2.2rem 3.6rem;
 }
+=======
+>>>>>>> 38093d83c16225045b9fbc704f1deafbc8b48003
 
-/* Remove custom margins for uniform spacing */
-.logo[alt="Reafco Logo"],
-.logo[alt="EY Logo"],
-.logo[alt="Bain Logo"] {
-    margin-left: 0;
-    margin-right: 0;
-}
 
-.logo[alt="Reafco Logo"] {
-    margin-right: 5rem;
-}
-
-.logo[alt="EY Logo"] {
-    margin-left: 5rem;
-}
-
-@keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-/* Styles for Sponsors page */
 
 .professional-section {
     display: flex;
@@ -117,26 +96,3 @@
     }
 }
 
-.feature-text {
-    margin: 0 auto;
-    padding: 2rem 0 0 0;
-}
-
-.bold {
-    font-weight: bold;
-    font-size: 1.4rem;
-}
-
-/* Reverse marquee animation for 'Our Corporate Partners' section */
-.marquee--reverse .marquee__group {
-    animation: marquee-reverse 9.6s linear infinite;
-}
-
-@keyframes marquee-reverse {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
