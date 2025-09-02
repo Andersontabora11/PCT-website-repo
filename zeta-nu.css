@@ -1,3 +1,35 @@
+/* White box styling for Zeta Nu intro, similar to Professionalism page */
+.zeta-nu-intro {
+  margin-top: 2rem;
+  padding: 2rem 3rem;
+  background: rgba(255,255,255,0.92);
+  border-radius: 32px;
+  max-width: 700px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  animation: pull-in 0.7s cubic-bezier(.6,-0.28,.74,.05) 0.1s forwards;
+  transition: box-shadow 0.3s;
+}
+
+.zeta-nu-intro:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+.zeta-nu-feature-text {
+  flex: 1;
+  text-align: left;
+}
+
+@keyframes pull-in {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
 .zeta-nu-section{
     display: flex;
     flex-direction: column;
@@ -267,6 +299,7 @@ justify-content: center;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 6;    /* adjust lines as needed */
+  line-clamp: 6;            /* standard property for compatibility */
   overflow: hidden;
 }
 

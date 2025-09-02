@@ -1,3 +1,22 @@
+/* White box styling for Sponsor Us intro, similar to Professionalism page */
+.sponsor-us-white-box {
+    background: rgba(255,255,255,0.92);
+    border-radius: 32px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    padding: 2rem 3rem;
+    margin-bottom: 2.2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    animation: pull-in 0.7s cubic-bezier(.6,-0.28,.74,.05) 0.1s forwards;
+    transition: box-shadow 0.3s;
+}
+
+.sponsor-us-white-box:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
 /* Styles for Sponsor Us page (copied and adapted from sponsors.css) */
 
 .professional-section {
