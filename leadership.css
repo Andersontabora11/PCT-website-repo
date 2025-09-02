@@ -1,3 +1,35 @@
+/* Responsive breakpoints for mobile and tablet, matching index.html */
+@media (max-width: 768px) {
+  .leadership-section {
+    height: auto;
+    padding: 1.2rem;
+    background-position: center 60%;
+  }
+  .leadership-section h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .executive-board, .chairs {
+    padding: 1.2rem 1rem;
+    min-height: auto;
+    max-width: 98vw;
+  }
+  .leadership-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+  .leadership-member {
+    max-width: 98vw;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .leadership-section h1 {
+    font-size: 1.5rem;
+  }
+}
  .leadership-section{
     display: flex;
     flex-direction: column;

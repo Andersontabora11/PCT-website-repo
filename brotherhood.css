@@ -1,3 +1,26 @@
+/* Responsive breakpoints for mobile and tablet, matching index.html */
+@media (max-width: 768px) {
+    .brotherhood-section {
+        height: auto;
+        padding: 1.2rem;
+        background-position: center 60%;
+    }
+    .brotherhood-section h1 {
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .brotherhood-intro {
+        padding: 1.2rem 1rem;
+        font-size: 1rem;
+        max-width: 98vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .brotherhood-section h1 {
+        font-size: 1.5rem;
+    }
+}
 /* Duplicate of professionalism.css for Philanthropy section. Update styles as needed. */
 
 .professional-divider {

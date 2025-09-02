@@ -1,3 +1,46 @@
+/* Responsive breakpoints for mobile and tablet, matching index.html */
+@media (max-width: 768px) {
+  .zeta-nu-section {
+    height: auto;
+    padding: 1.2rem;
+    background-position: center 60%;
+  }
+  .zeta-nu-section h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .zeta-nu-intro {
+    padding: 1.2rem 1rem;
+    font-size: 1rem;
+    max-width: 98vw;
+  }
+  .collection-title h2 {
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+  }
+  .zeta-nu-collection {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 0 0.5rem;
+  }
+  .zeta-nu-image img {
+    width: 100%;
+    max-width: 98vw;
+    height: auto;
+  }
+  .why-pct {
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .zeta-nu-section h1 {
+    font-size: 1.5rem;
+  }
+  .collection-title h2 {
+    font-size: 1.1rem;
+  }
+}
 /* White box styling for Zeta Nu intro, similar to Professionalism page */
 .zeta-nu-intro {
   margin-top: 2rem;

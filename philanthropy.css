@@ -1,3 +1,38 @@
+/* Responsive breakpoints for mobile and tablet, matching index.html */
+@media (max-width: 768px) {
+    .professional-section {
+        height: auto;
+        padding: 1.2rem;
+        background-position: center 60%;
+    }
+    .professional-section h1 {
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .professional-intro {
+        padding: 1.2rem 1rem;
+        font-size: 1rem;
+        max-width: 98vw;
+    }
+    .events-section {
+        max-width: 98vw;
+        margin: 0 0.5rem 2.2rem 0.5rem;
+    }
+    .events-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .signature-event {
+        width: 100%;
+        max-width: 98vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .professional-section h1 {
+        font-size: 1.5rem;
+    }
+}
 /* Duplicate of brotherhood.css for Philanthropy section. Update styles as needed. */
 
 .professional-divider {
