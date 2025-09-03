@@ -1,3 +1,26 @@
+        <script>
+        // Hamburger menu toggle logic
+        document.addEventListener('DOMContentLoaded', function() {
+            var toggle = document.querySelector('.navbar-toggle');
+            var navLinks = document.querySelector('.nav-links');
+            if (toggle && navLinks) {
+                toggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('open');
+                });
+            }
+            // Optional: close menu when clicking outside or on a link
+            document.addEventListener('click', function(e) {
+                if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !toggle.contains(e.target)) {
+                    navLinks.classList.remove('open');
+                }
+            });
+            navLinks.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('open');
+                });
+            });
+        });
+        </script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +43,11 @@
                     <a href="index.html">Phi Chi Theta</a>
                 </div>
             </div>
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <div class="nav-links">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -59,8 +87,8 @@
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
                 <div class="social-icons">
-                    <a href="https://www.instagram.com/pctosu/?hl=en" target="_blank"><img src="Web Images/instagram.png" alt="Instagram Icon" width="30"></a>
-                    <a href="https://www.linkedin.com/company/pctosu/posts/?feedView=all" target="_blank"><img src="Web Images/linkedin.png" alt="LinkedIn Icon" width="30"></a>
+                    <a href="https://www.instagram.com/pctosu/?hl=en" target="_blank" class="social-link"><img src="Web Images/instagram.png" alt="Instagram Icon" width="30"></a>
+                    <a href="https://www.linkedin.com/company/pctosu/posts/?feedView=all" target="_blank" class="social-link"><img src="Web Images/linkedin.png" alt="LinkedIn Icon" width="30"></a>
                 </div>     
             </div>
         </nav>
