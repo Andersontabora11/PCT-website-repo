@@ -39,11 +39,15 @@
         justify-content: center;
     }
     .professional-intro {
-        padding: 0.5rem 1rem 1.2rem 1rem;
+        margin-top: 0.5rem !important;
+        padding: 1.2rem 1rem;
         font-size: 1rem;
         max-width: 98vw;
-        margin-top: 0.5rem !important;
-    }
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100%;
     }
     .sponsor-headshot-person {
         width: 90vw !important;
@@ -69,7 +73,7 @@
         margin-right: 0 !important;
         text-align: left !important;
     }
-
+}
 
 @media (max-width: 480px) {
     .professional-section h1 {
