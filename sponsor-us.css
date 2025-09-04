@@ -52,8 +52,8 @@
     .sponsor-headshot-person {
         width: 90vw !important;
         max-width: 320px;
-            .professional-intro {
-                margin-top: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
         align-items: center !important;
     }
     .sponsor-headshot-img {
@@ -73,7 +73,6 @@
         margin-right: 0 !important;
         text-align: left !important;
     }
-}
 }
 
 @media (max-width: 480px) {
