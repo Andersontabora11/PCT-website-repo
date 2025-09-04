@@ -317,13 +317,21 @@ nav .dropdown a:hover {           /* ADD */
     height: 100vh;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; 
+    background-attachment: fixed;
     color: white; /* White text */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for better readability */
     text-align: center;
     padding: 0 1rem;
     background-image: url('Web Images/pct-home-image.jpg'); /* Background image */
-    
+}
+
+@media (max-width: 900px) {
+  .title-section {
+    background-size: contain !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: initial !important;
+  }
 }
 .title-section img {
     width: 150px;

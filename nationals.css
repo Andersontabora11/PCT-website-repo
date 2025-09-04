@@ -4,8 +4,9 @@
     height: auto;
     padding: 1.2rem;
     background-position: center center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-attachment: initial !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
