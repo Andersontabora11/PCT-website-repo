@@ -441,19 +441,39 @@ nav .dropdown a:hover {           /* ADD */
 /* pillars section */
 
 .our-pillars-section {
-    position: relative;
-    isolation: isolate;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    background-image: url("web Images/fisher-picture.png"); 
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-image: url("Web Images/fisher-picture.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  min-height: 50vh;
+  height: auto;
+/* Responsive background image for .our-pillars-section */
+@media (max-width: 900px) {
+  .our-pillars-section {
+    min-height: 40vh;
+    padding: 1rem;
     background-size: cover;
-    background-position: center;
-    color: white;
-    min-height: 50vh;
-    height: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
+@media (max-width: 600px) {
+  .our-pillars-section {
+    min-height: 30vh;
+    padding: 0.5rem;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
 }
 
 .our-pillars-section::before {
