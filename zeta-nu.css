@@ -1,15 +1,15 @@
 /* Responsive breakpoints for mobile and tablet, matching index.html */
 @media (max-width: 768px) {
   .zeta-nu-section {
-    min-height: 40vw;
-    height: 40vw;
-    max-height: 60vw;
+    min-height: 180px;
+    height: auto;
+    max-height: none;
     padding: 0;
     background-position: top center !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
     background-attachment: initial !important;
-    overflow: hidden;
+    overflow: visible;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -18,30 +18,27 @@
     position: relative;
     filter: none !important;
     opacity: 1 !important;
+    background-image: url('Web Images/Zeta nu pic.png');
   }
   .zeta-nu-section h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90vw;
-    max-width: 90vw;
-    font-size: clamp(1.2rem, 7vw, 2.2rem);
-    margin: 0 auto;
+    position: static;
+    width: 96vw;
+    max-width: 96vw;
+    font-size: clamp(1.1rem, 7vw, 2rem);
+    margin: 1.2rem auto 0 auto;
     color: white;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
     z-index: 2;
-    padding: 0.5rem 2vw;
+    padding: 0.7rem 2vw;
     box-sizing: border-box;
-    background: rgba(0,0,0,0.15);
+    background: rgba(0,0,0,0.18);
     border-radius: 8px;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     white-space: normal;
     overflow-wrap: break-word;
-    line-height: 1.1;
+    line-height: 1.15;
+    word-break: break-word;
   }
   .zeta-nu-section {
     min-height: 40vw;
