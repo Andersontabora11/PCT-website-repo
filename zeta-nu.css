@@ -1,15 +1,15 @@
 /* Responsive breakpoints for mobile and tablet, matching index.html */
 @media (max-width: 768px) {
   .zeta-nu-section {
-    min-height: 180px;
-    height: auto;
-    max-height: none;
+    min-height: 40vw;
+    height: 40vw;
+    max-height: 60vw;
     padding: 0;
-    background-position: top center !important;
+    background-position: center center !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
     background-attachment: initial !important;
-    overflow: visible;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -21,24 +21,25 @@
     background-image: url('Web Images/Zeta%20nu%20pic.png');
   }
   .zeta-nu-section h1 {
-    position: static;
-    width: 96vw;
-    max-width: 96vw;
-    font-size: clamp(1.1rem, 7vw, 2rem);
-    margin: 4.5rem auto 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    width: 100vw;
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
+    margin: 0 auto;
     color: white;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
     z-index: 2;
-    padding: 0.7rem 2vw;
+    padding: 0 5vw;
     box-sizing: border-box;
-    background: rgba(0,0,0,0.18);
+    background: rgba(0,0,0,0.15);
     border-radius: 8px;
     text-align: center;
-    display: block;
-    white-space: normal;
-    overflow-wrap: break-word;
-    line-height: 1.15;
-    word-break: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   /* Removed duplicate .zeta-nu-section rule */
   .why-pct {
