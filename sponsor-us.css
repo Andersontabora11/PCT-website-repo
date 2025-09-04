@@ -30,7 +30,8 @@
         z-index: 2;
         padding: 1.8rem 5vw 1.2rem 5vw;
         box-sizing: border-box;
-        background: rgba(0,0,0,0.15);
+        /* background: rgba(0,0,0,0.15); */
+        background: none;
         border-radius: 8px;
         text-align: center;
         display: flex;
@@ -45,6 +46,25 @@
     .feature-text {
         max-width: 98vw;
         padding: 0.5rem;
+    }
+    .sponsor-headshots-mobile {
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100%;
+    }
+    .sponsor-headshot-person {
+        width: 90vw !important;
+        max-width: 320px;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .sponsor-headshot-img {
+        width: 80vw !important;
+        max-width: 220px;
+        height: auto !important;
     }
 }
 
