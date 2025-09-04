@@ -18,14 +18,14 @@
     position: relative;
     filter: none !important;
     opacity: 1 !important;
-    background-image: url('Web Images/Zeta nu pic.png');
+    background-image: url('Web Images/Zeta%20nu%20pic.png');
   }
   .zeta-nu-section h1 {
     position: static;
     width: 96vw;
     max-width: 96vw;
     font-size: clamp(1.1rem, 7vw, 2rem);
-    margin: 1.2rem auto 0 auto;
+    margin: 4.5rem auto 0 auto;
     color: white;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
     z-index: 2;
@@ -40,26 +40,7 @@
     line-height: 1.15;
     word-break: break-word;
   }
-  .zeta-nu-section {
-    min-height: 40vw;
-    height: 40vw;
-    max-height: 60vw;
-    padding: 0;
-    background-position: top center !important;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    background-attachment: initial !important;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    filter: none !important;
-    opacity: 1 !important;
-    height: auto;
-  }
+  /* Removed duplicate .zeta-nu-section rule */
   .why-pct {
     padding: 1rem 0.5rem;
   }
