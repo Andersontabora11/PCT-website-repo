@@ -29,7 +29,7 @@
     position: fixed;
     top: 0;
     right: -100vw;
-    width: 30vw;
+    width: 45vw;
     height: 100vh;
     background: rgba(0,0,0,0.95);
     flex-direction: column;
