@@ -10,11 +10,15 @@
     background-repeat: no-repeat !important;
     background-attachment: initial !important;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
+    .involvement-section h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-align: center;
+      width: 100%;
+      margin: 0 auto 1rem auto;
+      display: block;
+    }
     position: relative;
   }
   .zeta-nu-section h1 {
@@ -38,23 +42,24 @@
     align-items: center;
     justify-content: center;
   }
-  .zeta-nu-intro {
-    padding: 1.2rem 1rem;
-    font-size: 1rem;
-    max-width: 98vw;
-  }
-  .collection-title h2 {
-    font-size: 1.5rem;
-    padding: 0.5rem 0;
-  }
-  .zeta-nu-collection {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    margin: 0 0.5rem;
-  }
-  .zeta-nu-image img {
-    width: 100%;
-    max-width: 98vw;
+  .zeta-nu-section {
+    min-height: 40vw;
+    height: 40vw;
+    max-height: 60vw;
+    padding: 0;
+    background-position: top center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-attachment: initial !important;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    filter: none !important;
+    opacity: 1 !important;
     height: auto;
   }
   .why-pct {
