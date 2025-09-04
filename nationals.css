@@ -3,7 +3,14 @@
   .nationals-section {
     height: auto;
     padding: 1.2rem;
-    background-position: center 60%;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
   .nationals-section h1 {
     font-size: 2.2rem;
@@ -13,16 +20,25 @@
     padding: 1.2rem 1rem;
     min-height: auto;
     max-width: 98vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
   .history-container {
     flex-direction: column;
     gap: 1rem;
     padding: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
   .crest-container img {
     width: 100%;
     max-width: 98vw;
     height: auto;
+    display: block;
+    margin: 0 auto;
   }
 }
 
@@ -174,15 +190,22 @@
   .nationals-alumni-stats {
     gap: 1.5rem;
     padding: 1.25rem 1rem;
-    grid-template-columns: repeat(1, minmax(0, 1fr)); /* 2 columns */
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     justify-items: center;
+    text-align: center;
   }
   .nationals-alumni-stats .alumni-stat-container{
     min-height: 130px;
     padding: 14px;
     border-radius: 8px;
     min-width: 0;
-    width: 400px;
+    width: 90vw;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .nationals-alumni-stats .alumni-stat-container h1 {
     font-size: clamp(1.25rem, 4.2vw, 1.75rem);
@@ -192,29 +215,50 @@
   }
 
   .history-container {
-    display: flex;                          /* ensure flex on mobile */
-    flex-direction: column;                 /* stack vertically */
+    display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 1rem;
-    text-align: left;                       /* keep paragraph left-aligned */
+    text-align: center;
   }
   .crest-container {
-    order: -1;                              /* image first (on top) */
+    order: -1;
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   .pct-crest {
     margin-left: 0;
-    max-width: clamp(160px, 50vw, 260px);   /* sensible mobile size */
+    max-width: clamp(160px, 50vw, 260px);
     height: auto;
     display: block;
+    margin: 0 auto;
   }
   .history-section h3 {
     font-size: clamp(1rem, 4.5vw, 1.25rem);
-    text-align: center;                     /* headline centered looks nicer */
+    text-align: center;
     margin-bottom: .5rem;
+    width: 100%;
+    margin: 0 auto .5rem auto;
   }
+@media (max-width: 900px) {
+  .region-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 10px;
+  }
+  .region-section img {
+    width: 90vw;
+    max-width: 90vw;
+    height: auto;
+    margin: 0 auto 20px auto;
+    display: block;
+  }
+}
 }
 
 
