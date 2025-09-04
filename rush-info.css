@@ -174,42 +174,123 @@
 }
 
 @media (max-width: 900px) {
-@media (max-width: 768px) {
-            .rush-header-section {
-                min-height: 60vw;
-                height: 60vw;
-                max-height: none;
-                padding-top: 3.5rem;
-                background-position: center center !important;
-                background-size: cover !important;
-                background-repeat: no-repeat !important;
-                background-attachment: initial !important;
-                overflow: hidden;
-                position: relative;
-            }
-            .rush-header-section h1 {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 90vw;
-                font-size: clamp(1.7rem, 9vw, 2.7rem);
-                margin: 0 auto;
-                color: white;
-                text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-                z-index: 2;
-                padding: 1.2rem 5vw;
-                box-sizing: border-box;
-                background: rgba(0,0,0,0.18);
-                border-radius: 8px;
-                text-align: center;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: auto;
-                min-height: 3.5em;
-            }
+  .rush-testimonial-row, .rush-testimonial-row.reverse {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.2rem 1rem;
+  }
+  .rush-testimonial-img {
+      margin-bottom: 0.5rem;
+  }
+  .rush-testimonial-text {
+      align-items: center;
+      text-align: center;
+  }
 }
+
+@media (max-width: 768px) {
+    .rush-header-section {
+        min-height: 44vh;
+        height: 44vh;
+        max-height: none;
+        padding-top: 0;
+        background-position: center center !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-attachment: initial !important;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .rush-header-section h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90vw;
+        font-size: clamp(2rem, 9vw, 2.7rem);
+        margin: 0 auto;
+        color: white;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        z-index: 2;
+        padding: 1.2rem 5vw;
+        box-sizing: border-box;
+        background: rgba(0,0,0,0.18);
+        border-radius: 8px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        min-height: 3.5em;
+    }
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        z-index: 1000;
+        background: white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    body {
+        padding-top: 60px;
+    }
+    .nav-links {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 1.5rem;
+        top: 1.2rem;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        z-index: 1100;
+    }
+    .hamburger span, .hamburger span:before, .hamburger span:after {
+        display: block;
+        position: absolute;
+        width: 32px;
+        height: 4px;
+        background: #6a1fae;
+        border-radius: 2px;
+        transition: all 0.3s;
+        content: '';
+    }
+    .hamburger span {
+        top: 14px;
+    }
+    .hamburger span:before {
+        top: -10px;
+    }
+    .hamburger span:after {
+        top: 10px;
+    }
+    .nav-links.open {
+        display: flex !important;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100vw;
+        background: white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        z-index: 1050;
+    }
+    .nav-links.open ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        padding: 1.5rem 2rem;
+    }
+    .nav-links.open li {
+        margin: 1rem 0;
+    }
     .rush-testimonial-row, .rush-testimonial-row.reverse {
         flex-direction: column;
         align-items: center;

@@ -19,7 +19,10 @@
                     <a href="index.html">Phi Chi Theta</a>
                 </div>
             </div>
-            <div class="nav-links">
+            <div class="hamburger" id="hamburger-menu" tabindex="0" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links">
+                <span></span>
+            </div>
+            <div class="nav-links" id="nav-links">
                 <ul>
                     <li>
                         <a href="index.html">Home</a>
@@ -279,6 +282,24 @@
         </div>
     </footer>
     <script>
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger-menu');
+        const navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', function() {
+            navLinks.classList.toggle('open');
+            const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !expanded);
+        });
+        // Close menu when clicking outside (mobile)
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+                    navLinks.classList.remove('open');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                }
+            }
+        });
+        // FAQ toggles
         document.querySelectorAll('.faq-toggle').forEach(function(btn) {
             btn.addEventListener('click', function() {
                 var parent = btn.parentElement;
