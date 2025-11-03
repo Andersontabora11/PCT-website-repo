@@ -59,12 +59,13 @@
     justify-content: center;
     text-align: center;
   }
-  .crest-container img {
-    width: 100%;
-    max-width: 98vw;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+  .crest-container img,
+  .pct-crest {
+    display: block !important;
+    margin: 0 auto !important;
+    width: clamp(160px, 50vw, 260px) !important;
+    height: auto !important;
+    max-width: 98vw !important;
   }
 }
 

@@ -88,6 +88,80 @@
 /* import font */
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+/* Responsive header tweak: hide crest and center site title on small screens */
+@media (max-width: 768px) {
+  /* keep the small navbar crest visible on mobile; only hide the large hero crest below */
+  .pct-home-logo img {
+    display: inline-block !important;
+    width: 30px !important;
+    height: auto !important;
+    opacity: 1 !important;
+  }
+
+  /* also hide the large crest that is part of the title section on the home page */
+  .title-section img {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    opacity: 0 !important;
+  }
+
+  /* keep the nav layout unchanged on mobile: logo area remains in-flow (left side) */
+  nav .logo-container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    position: static !important;
+    left: auto !important;
+    transform: none !important;
+    z-index: 10 !important;
+  }
+
+  /* keep logo text left-aligned inside the nav (do not center the nav title) */
+  nav .logo-text {
+    width: auto !important;
+    text-align: left !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+
+  /* ensure navbar toggle stays visible at right */
+  .navbar-toggle {
+    margin-left: auto;
+  }
+
+  /* nudge the page title down so it isn't cut off by the absolute-positioned nav */
+  .title-section h1 {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    top: calc(8vh + 0.6rem) !important; /* below the nav */
+    font-size: 2.2rem !important;
+    padding: 0 1rem !important;
+    width: 90vw !important;
+    text-align: center !important;
+    z-index: 1001 !important;
+  }
+
+  /* subtitle sits below the main title and is centered as well */
+  .title-section h2 {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    top: calc(8vh + 3.2rem) !important; /* tuned to sit under h1 */
+    font-size: 1.1rem !important;
+    width: 90vw !important;
+    text-align: center !important;
+    z-index: 1001 !important;
+    margin: 0 !important;
+    padding: 0 1rem !important;
+  }
+
+}
+
 :root {
   --color-text: navy;
   --color-bg: rgb(255, 255, 255);

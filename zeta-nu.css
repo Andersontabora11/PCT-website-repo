@@ -54,7 +54,7 @@
   .collection-title h2 {
     font-size: 1.1rem;
   }
-}
+
 /* White box styling for Zeta Nu intro, similar to Professionalism page */
 .zeta-nu-intro {
   margin-top: 2rem;
@@ -191,6 +191,7 @@
 .zeta-nu-collection .collection-text h3{
   margin: 0; /* margins can make the item taller than the row and create apparent seams */
 }
+}
 
 @media (max-width: 768px) {
     .zeta-nu-collection h1{
@@ -270,27 +271,26 @@
     grid-template-columns: repeat(2, minmax(0,1fr)); 
     margin: 2rem;
 }
-  
-}
-@media (max-width: 620px){
-  .achievements-section{ 
-    grid-template-columns: 1fr; 
-    margin: 2rem auto;
-}
-
-.achievements-section .achievement-container {
-    max-width: 320px;  
-    margin: 0 auto;
-    padding: .8rem;    
-  }
-
-}
-
-/* Card: fixed 9:16 ratio */
-.achievements-section .achievement-container{
-  position: relative;
-  aspect-ratio: 9 / 16;   /* keep this ratio */
-  width: 100%;
+  .zeta-nu-section h1 {
+    position: absolute !important;
+    top: 50% !important;
+    left: 0 !important;
+    right: 0 !important;
+    transform: translateY(-50%) !important;
+    width: 100vw !important;
+    font-size: clamp(1.5rem, 8vw, 2.5rem) !important;
+    margin: 0 auto !important;
+    color: white !important;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5) !important;
+    z-index: 2 !important;
+    padding: 0 5vw !important;
+    box-sizing: border-box !important;
+    background: rgba(0,0,0,0.15) !important;
+    border-radius: 8px !important;
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   overflow: hidden;
   border-radius: 10px;
   /* background: linear-gradient(180deg, #ffffff, #f6f7fb); */
@@ -307,6 +307,7 @@ justify-content: center;
     text-align: center;
     color: white;
 }
+
 
 .achievements-section > .achievement-container:nth-child(1) {
   background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url("Web Images/Andrew Website Overhaul-20250815T034045Z-1-001/Anderson-Andrew Website Overhaul/General/3-2-Achievers.jpg");
@@ -406,4 +407,4 @@ justify-content: center;
     border-radius: 10px;
     padding: 2rem 0;
 }
-
+}
