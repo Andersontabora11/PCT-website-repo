@@ -54,7 +54,7 @@
   .collection-title h2 {
     font-size: 1.1rem;
   }
-
+}
 /* White box styling for Zeta Nu intro, similar to Professionalism page */
 .zeta-nu-intro {
   margin-top: 2rem;
@@ -190,7 +190,6 @@
 .zeta-nu-collection .collection-text h1,
 .zeta-nu-collection .collection-text h3{
   margin: 0; /* margins can make the item taller than the row and create apparent seams */
-}
 }
 
 @media (max-width: 768px) {
