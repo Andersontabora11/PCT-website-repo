@@ -373,9 +373,17 @@ nav .dropdown a:hover {           /* ADD */
 
 @media (max-width: 600px) {
   .title-section {
-    background-size: contain !important;
-    background-position: center top !important;
-    min-height: 60vh;
+    background-image:
+      url('Web Images/pct-home-image.jpg'),
+      url('Web Images/Yuvi Overhaul/Professionalism/6-PhotoCarousel6.png'),
+      url('Web Images/14-BecomeASponsor.JPG');
+    background-size: cover, cover, cover;
+    background-position: top, center, bottom;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    position: relative;
   }
 }
 .title-section img {
