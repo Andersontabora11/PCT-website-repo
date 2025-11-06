@@ -28,7 +28,8 @@
   .nav-links {
     position: fixed;
     top: 0;
-    right: -100vw;
+    left: auto;
+    right: 0; /* slide in from the right */
     width: 45vw;
     height: 100vh;
     background: rgba(0,0,0,0.95);
@@ -36,13 +37,15 @@
     align-items: flex-start;
     justify-content: flex-start;
     padding: 2rem 1.5rem;
-    transition: right 0.3s ease;
-    z-index: 1000;
-    box-shadow: -2px 0 12px rgba(0,0,0,0.18);
+    transition: transform 0.3s ease;
+    transform: translateX(100%); /* off-screen to the right when closed */
+    z-index: 1100; /* ensure the drawer sits above hero titles */
+    box-shadow: 2px 0 12px rgba(0,0,0,0.18);
     overflow-y: auto;
   }
   .nav-links.open {
-    right: 0;
+    transform: translateX(0); /* slide into view when open (from right) */
+    z-index: 1100;
   }
   .nav-links ul {
     flex-direction: column;
@@ -83,6 +86,20 @@
     align-items: center;
     width: 100%;
     padding-left: 0;
+  }
+}
+
+/* On narrow phones make the drawer full-screen so it doesn't leave a confusing half-overlay */
+@media (max-width: 600px) {
+  .nav-links {
+    width: 100vw !important;
+    left: auto !important;
+    right: 0 !important;
+    transform: translateX(100%) !important;
+    padding: 2.5rem 1.5rem;
+  }
+  .nav-links.open {
+    transform: translateX(0) !important;
   }
 }
 /* import font */
@@ -128,9 +145,13 @@
     display: block !important;
   }
 
-  /* ensure navbar toggle stays visible at right */
+  /* ensure navbar toggle stays visible at right and above nav drawer */
   .navbar-toggle {
     margin-left: auto;
+    position: fixed;
+    top: 1.2rem;
+    right: 1.2rem;
+    z-index: 1200; /* above nav drawer */
   }
 
   /* nudge the page title down so it isn't cut off by the absolute-positioned nav */
@@ -362,25 +383,6 @@ nav .dropdown a:hover {           /* ADD */
   transform: translateY(-1px);
   transition: background .2s ease, transform .2s ease;
 }
-
-
-/* Title Section */
-
-/* .title{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; 
-    color: white; /* White text */
-    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
-    text-align: center;
-    padding: 0 1rem;
-} */ 
 
 .title-section {
     display: flex;

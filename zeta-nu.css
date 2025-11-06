@@ -1,3 +1,125 @@
+/* --- ACHIEVEMENT CARDS DESKTOP STYLES --- */
+.achievements-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 3rem auto 3rem auto;
+  padding: 0 2rem;
+  align-items: stretch;
+  justify-items: center;
+}
+
+.achievement-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  border-radius: 32px;
+  min-height: 480px;
+  width: 100%;
+  max-width: 340px;
+  aspect-ratio: 9/16;
+  box-sizing: border-box;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  position: relative;
+  overflow: hidden;
+  gap: 1.2rem;
+}
+
+.achievement-container.card1 {
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('Web Images/Andrew Website Overhaul-20250815T034045Z-1-001/Anderson-Andrew Website Overhaul/General/3-2-Achievers.jpg');
+}
+.achievement-container.card2 {
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('Web Images/Andrew Website Overhaul-20250815T034045Z-1-001/Anderson-Andrew Website Overhaul/General/3-2-Leaders.JPEG');
+}
+.achievement-container.card3 {
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('Web Images/Andrew Website Overhaul-20250815T034045Z-1-001/Anderson-Andrew Website Overhaul/General/3-2-Professionals.jpeg');
+}
+
+.achievement-container h3 {
+  margin: 0 0 1.2rem 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.35);
+  flex-shrink: 0;
+}
+.achievement-container img {
+  margin: 0 0 1.2rem 0;
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  display: block;
+  flex-shrink: 0;
+}
+.achievement-container p {
+  margin: 0;
+  font-size: clamp(1.1rem, 1.5vw, 1.25rem);
+  line-height: 1.5;
+  color: #fff;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.35);
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  word-break: normal;
+  overflow-wrap: normal;
+  white-space: normal;
+  hyphens: auto;
+  padding: 0 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .achievements-section {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 800px;
+  }
+  .achievement-container {
+    min-height: 400px;
+    max-width: 320px;
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .achievements-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .achievement-container {
+    min-height: 320px;
+    max-width: 95vw;
+    padding: 1.2rem 0.5rem;
+    border-radius: 18px;
+  }
+  .achievement-container h3 {
+    font-size: 1.5rem;
+  }
+  .achievement-container img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.8rem;
+  }
+  .achievement-container p {
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    padding: 0 0.2rem;
+  }
+}
 /* Responsive breakpoints for mobile and tablet, matching index.html */
 @media (max-width: 768px) {
   .zeta-nu-section {
@@ -231,38 +353,15 @@
     margin-bottom: -3rem;
 }
 
-/* .achievements-section{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
-    background-color: blue;
-}
-
-.achievements-section .achievement-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    background: red;
-    gap: 2rem;
-    max-width: 300px;
-    border-radius: 10px;
-    aspect-ratio: 9/16;
-} */
-
 .achievements-section{
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(1rem, 2vw, 2rem);
-  max-width: 1100px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: clamp(1rem, 2.2vw, 1.5rem);
+  padding: 2rem 1rem;
   align-items: stretch;
-  justify-items: stretch;
+  justify-items: center;
 }
 
 @media (max-width: 768px){
@@ -334,41 +433,86 @@ justify-content: center;
 }
 
 /* Title & copy (fluid) */
-.achievement-container h3{
-  margin: 0;
-  font-size: clamp(1.1rem, 2vw, 1.4rem);
-  line-height: 1.2;
-  font-size: 1.3rem;
-}
-.achievement-container p{
-  margin: 0;
-  font-size: clamp(.95rem, 1.2vw, 1.05rem);
+/* Vertically center all content in achievement cards */
+/* Card style for achievement containers */
+  /* Achievement card: perfect vertical centering, balanced spacing */
+  .achievement-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    border-radius: 24px;
+    height: 520px;
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    position: relative;
+    overflow: hidden;
+    gap: 1.2rem;
+  }
+  .achievement-container.card1 {
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('Web Images/Andrew Website Overhaul-20250815T034045Z-1-001/Anderson-Andrew Website Overhaul/General/3-2-Achievers.jpg');
+  }
+  .achievement-container.card2 {
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('Web Images/Andrew Website Overhaul-20250815T034045Z-1-001/Anderson-Andrew Website Overhaul/General/3-2-Leaders.JPEG');
+  }
+  .achievement-container.card3 {
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('Web Images/Andrew Website Overhaul-20250815T034045Z-1-001/Anderson-Andrew Website Overhaul/General/3-2-Professionals.jpeg');
+  }
+/* Card content spacing and centering */
+  .achievement-container h3 {
+    margin: 0;
+    font-size: 2.1rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.35);
+    flex-shrink: 0;
+  }
+  .achievement-container img {
+    margin: 0;
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    display: block;
+    flex-shrink: 0;
+  }
+  .achievement-container p {
+    margin: 0;
+  font-size: clamp(1rem, 2vw, 1.25rem);
   line-height: 1.55;
-  overflow-wrap: anywhere;
-  min-height: 0;            /* allow grid child to shrink */
-  overflow: hidden; 
-  padding: 2rem;        /* prevent overflow in fixed ratio */
+  overflow-wrap: break-word;
+  min-height: 0;
+  padding: 0 0.5rem;
+  color: #fff;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.35);
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 1;
+  text-align: center;
+/* Center the bottom card when only one in last row */
+.achievements-section > .achievement-container.card3 {
+  grid-column: 2 / span 1;
 }
+  }
 
-/* Optional: clamp long text to keep layout tight */
-.achievement-container p,
-.achievement-list{
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 6;    /* adjust lines as needed */
-  line-clamp: 6;            /* standard property for compatibility */
-  overflow: hidden;
-}
+/* Remove line clamp for achievement card text so all content is visible */
 
-/* Icon sizing within fixed ratio */
-.achievement-container img{
-  width: clamp(100%, 20%, 72px);  /* % is of card width */
-  height: auto;
-  object-fit: contain;
-  display: block;
-  background-color: red;;
-  filter: drop-shadow(0 2px 6px rgba(0,0,0,.12));
-}
+/* Remove duplicate/conflicting icon sizing */
 
 .involvement-section{
     display: flex;
