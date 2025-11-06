@@ -1,7 +1,7 @@
-/* import font */
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-:root {
+ :root {
   --color-text: navy;
   --color-bg: rgb(255, 255, 255);
   --color-bg-accent: #ffffff;
@@ -11,15 +11,14 @@
   --scroll-start: 0;
   --scroll-end: calc(-100% - var(--gap));
   --section-padding: 40px 20px;
-  font-size:16px;
+  font-size: 16px;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* Pick font */
-    font-family: 'PT Serif', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'PT Serif', sans-serif;
 }
 
 
@@ -27,26 +26,24 @@
 /* Navigation bar */
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1.2rem;
-    height: 8vh;
-     position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.2rem;
+  height: 8vh;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(3px); /* Blur effect for the background *//* Ensure nav is above other content */
+  backdrop-filter: blur(3px);
   z-index: 10;
-
-  /* fade down */
-   opacity: 0;
+  opacity: 0;
   transform: translateY(-14px);
   will-change: transform, opacity;
   animation: nav-drop-fade .5s cubic-bezier(.2,.65,.3,1) .3s forwards;
 }
-/* Hamburger menu styles for mobile/tablet */
+/* Hamburger menu styles */
 .navbar-toggle {
   display: none;
   flex-direction: column;
@@ -160,10 +157,9 @@ nav {
 
 @keyframes nav-drop-fade {
   from { opacity: 0; transform: translateY(-14px); }
-  to   { opacity: 1; transform: translateY(0); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Respect reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   nav { opacity: 1; transform: none; animation: none !important; }
 }
@@ -247,7 +243,7 @@ nav .nav-links ul li > a:hover {
     font-weight: 500;
 }
 
-/* Dropdown panel (hidden by default) */
+/* Dropdown panel */
 nav .dropdown {                   /* ADD */
   position: absolute;
   top: 100%;          /* just below the parent link */
@@ -315,22 +311,6 @@ nav .dropdown a:hover {           /* ADD */
 
 
 /* Title Section */
-
-/* .title{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; 
-    color: white; /* White text */
-    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
-    text-align: center;
-    padding: 0 1rem;
-} */ 
 
 .title-section {
     display: flex;
@@ -456,7 +436,33 @@ nav .dropdown a:hover {           /* ADD */
     text-align: left;
 }
 
-/* ADD: mobile breakpoint */
+@media (max-width: 768px) {
+  .president-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 50px 16px;
+  }
+  .president-message {
+    width: 100%;
+    max-width: 65ch;
+    align-items: flex-start;
+  }
+  .president-image {
+    order: -1;
+    width: 100%;
+    justify-content: center;
+  }
+  #wyatt-headshot {
+    width: clamp(200px, 60vw, 320px);
+    max-width: 90vw;
+    min-width: 0;
+    height: auto;
+  }
+  .president-message h2 {
+    text-align: center;
+  }
+}
 @media (max-width: 768px) {
   /* Stack vertically on small screens */
   .president-section {
@@ -494,7 +500,10 @@ nav .dropdown a:hover {           /* ADD */
   }
 }
 
-/* (Optional) even-smaller phones */
+@media (max-width: 480px) {
+  #wyatt-headshot { width: 70vw; }
+  .president-message h2 { font-size: 1.75rem; }
+}
 @media (max-width: 480px) {
   #wyatt-headshot { width: 70vw; }
   .president-message h2 { font-size: 1.75rem; }
@@ -510,9 +519,11 @@ nav .dropdown a:hover {           /* ADD */
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  background-image: url("Web Images/fisher-picture.png"); /* Corrected path */
-  background-size: cover;
-  background-position: center;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url("Web Images/fisher-picture.png");
+  background-size: cover, cover;
+  background-position: center, center;
   color: white;
   min-height: 50vh;
   height: auto;
@@ -563,7 +574,7 @@ nav .dropdown a:hover {           /* ADD */
     text-align: center;
 }
 
-/* where youll find pct */
+/* where you'll find pct */
 
 .placements-section {
     display: flex;
@@ -581,12 +592,6 @@ nav .dropdown a:hover {           /* ADD */
     text-align: center;
 }
 
-/* .logo {
-  height: 40px;          
-  width: auto;
-  object-fit: contain;
-  display: block;
-} */
 
 .marquee {
   display: flex;
@@ -723,13 +728,13 @@ html {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Optional: respect reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; animation: none !important; }
+}
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; animation: none !important; }
 }
 
-/* Fallback if JS is off (keeps content visible) */
-noscript .reveal { opacity: 1; transform: none; }
 
 
 /* Rise + fade when element enters the viewport */
@@ -748,7 +753,13 @@ noscript .reveal { opacity: 1; transform: none; }
   transform: translateY(0);
 }
 
-/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none !important;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   .reveal-on-scroll {
     opacity: 1;
