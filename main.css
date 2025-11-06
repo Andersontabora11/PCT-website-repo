@@ -1,187 +1,5 @@
-/* Hamburger menu styles for mobile/tablet */
-.navbar-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 1001;
-}
-.navbar-toggle .bar {
-  display: block;
-  width: 28px;
-  height: 4px;
-  margin: 4px 0;
-  background-color: white;
-  border-radius: 2px;
-  transition: 0.3s;
-}
-
-@media (max-width: 900px) {
-  .navbar-toggle {
-    display: flex;
-  }
-  .nav-links {
-    position: fixed;
-    top: 0;
-    left: auto;
-    right: 0; /* slide in from the right */
-    width: 45vw;
-    height: 100vh;
-    background: rgba(0,0,0,0.95);
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 2rem 1.5rem;
-    transition: transform 0.3s ease;
-    transform: translateX(100%); /* off-screen to the right when closed */
-    z-index: 1100; /* ensure the drawer sits above hero titles */
-    box-shadow: 2px 0 12px rgba(0,0,0,0.18);
-    overflow-y: auto;
-  }
-  .nav-links.open {
-    transform: translateX(0); /* slide into view when open (from right) */
-    z-index: 1100;
-  }
-  .nav-links ul {
-    flex-direction: column;
-    gap: 1.5rem;
-    width: 100%;
-  }
-  .nav-links ul li.has-dropdown {
-    position: relative;
-  }
-  .nav-links ul li .dropdown {
-    left: 0;
-    right: auto;
-    top: 100%;
-    min-width: 160px;
-    position: absolute;
-    background: rgba(0,0,0,0.95);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-    border-radius: 10px;
-    padding: 8px;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity .2s ease, visibility .2s;
-    z-index: 1001;
-  }
-  .nav-links ul li.has-dropdown:hover > .dropdown,
-  .nav-links ul li.has-dropdown:focus-within > .dropdown {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-  }
-  .nav-links .social-icons {
-    margin-top: 2rem;
-    gap: 2rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    padding-left: 0;
-  }
-}
-
-/* On narrow phones make the drawer full-screen so it doesn't leave a confusing half-overlay */
-@media (max-width: 600px) {
-  .nav-links {
-    width: 100vw !important;
-    left: auto !important;
-    right: 0 !important;
-    transform: translateX(100%) !important;
-    padding: 2.5rem 1.5rem;
-  }
-  .nav-links.open {
-    transform: translateX(0) !important;
-  }
-}
 /* import font */
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-/* Responsive header tweak: hide crest and center site title on small screens */
-@media (max-width: 768px) {
-  /* keep the small navbar crest visible on mobile; only hide the large hero crest below */
-  .pct-home-logo img {
-    display: inline-block !important;
-    width: 30px !important;
-    height: auto !important;
-    opacity: 1 !important;
-  }
-
-  /* also hide the large crest that is part of the title section on the home page */
-  .title-section img {
-    display: none !important;
-    width: 0 !important;
-    height: 0 !important;
-    opacity: 0 !important;
-  }
-
-  /* keep the nav layout unchanged on mobile: logo area remains in-flow (left side) */
-  nav .logo-container {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    gap: 0.5rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    position: static !important;
-    left: auto !important;
-    transform: none !important;
-    z-index: 10 !important;
-  }
-
-  /* keep logo text left-aligned inside the nav (do not center the nav title) */
-  nav .logo-text {
-    width: auto !important;
-    text-align: left !important;
-    margin: 0 !important;
-    display: block !important;
-  }
-
-  /* ensure navbar toggle stays visible at right and above nav drawer */
-  .navbar-toggle {
-    margin-left: auto;
-    position: fixed;
-    top: 1.2rem;
-    right: 1.2rem;
-    z-index: 1200; /* above nav drawer */
-  }
-
-  /* nudge the page title down so it isn't cut off by the absolute-positioned nav */
-  .title-section h1 {
-    position: absolute !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    top: calc(8vh + 0.6rem) !important; /* below the nav */
-    font-size: 2.2rem !important;
-    padding: 0 1rem !important;
-    width: 90vw !important;
-    text-align: center !important;
-    z-index: 1001 !important;
-  }
-
-  /* subtitle sits below the main title and is centered as well */
-  .title-section h2 {
-    position: absolute !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    top: calc(8vh + 3.2rem) !important; /* tuned to sit under h1 */
-    font-size: 1.1rem !important;
-    width: 90vw !important;
-    text-align: center !important;
-    z-index: 1001 !important;
-    margin: 0 !important;
-    padding: 0 1rem !important;
-  }
-
-}
 
 :root {
   --color-text: navy;
@@ -227,6 +45,117 @@ nav {
   transform: translateY(-14px);
   will-change: transform, opacity;
   animation: nav-drop-fade .5s cubic-bezier(.2,.65,.3,1) .3s forwards;
+}
+/* Hamburger menu styles for mobile/tablet */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+.navbar-toggle .bar {
+  display: block;
+  width: 28px;
+  height: 4px;
+  margin: 4px 0;
+  background-color: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+@media (max-width: 900px) {
+  .navbar-toggle {
+    display: flex;
+    position: fixed;
+    top: 1.2rem;
+    right: 1.2rem;
+    z-index: 3000 !important; /* highest: hamburger icon */
+  }
+  nav .nav-links {
+    position: fixed;
+    top: 0;
+    left: auto;
+    right: 0; /* slide in from the right */
+    width: 45vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.95);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2rem 1.5rem;
+    transition: transform 0.3s ease;
+    transform: translateX(100%); /* off-screen to the right when closed */
+    z-index: 2000 !important; /* ensure nav drawer is always above everything */
+    box-shadow: 2px 0 12px rgba(0,0,0,0.18);
+    overflow-y: auto;
+  }
+  nav .nav-links.open {
+    transform: translateX(0); /* slide into view when open (from right) */
+    z-index: 2000 !important;
+  }
+  .title-section {
+    z-index: auto !important;
+  }
+  nav .nav-links ul {
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+  }
+  nav .nav-links ul li.has-dropdown {
+    position: relative;
+  }
+  nav .nav-links ul li .dropdown {
+    left: 0;
+    right: auto;
+    top: 100%;
+    min-width: 160px;
+    position: absolute;
+    background: rgba(0,0,0,0.95);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    border-radius: 10px;
+    padding: 8px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .2s ease, visibility .2s;
+    z-index: 1001;
+  }
+  nav .nav-links ul li.has-dropdown:hover > .dropdown,
+  nav .nav-links ul li.has-dropdown:focus-within > .dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  nav .nav-links .social-icons {
+    margin-top: 2rem;
+    gap: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+/* On narrow phones make the drawer full-screen so it doesn't leave a confusing half-overlay */
+@media (max-width: 600px) {
+  nav .nav-links {
+    width: 100vw !important;
+    left: auto !important;
+    right: 0 !important;
+    transform: translateX(100%) !important;
+    padding: 2.5rem 1.5rem;
+  }
+  nav .nav-links.open {
+    transform: translateX(0) !important;
+  }
 }
 
 @keyframes nav-drop-fade {
@@ -384,6 +313,25 @@ nav .dropdown a:hover {           /* ADD */
   transition: background .2s ease, transform .2s ease;
 }
 
+
+/* Title Section */
+
+/* .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    color: white; /* White text */
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    text-align: center;
+    padding: 0 1rem;
+} */ 
+
 .title-section {
     display: flex;
     flex-direction: column;
@@ -393,46 +341,13 @@ nav .dropdown a:hover {           /* ADD */
     height: 100vh;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed; 
     color: white; /* White text */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for better readability */
     text-align: center;
     padding: 0 1rem;
     background-image: url('Web Images/pct-home-image.jpg'); /* Background image */
-}
-
-@media (max-width: 900px) {
-  .title-section {
-    min-height: 40vw;
-    height: auto;
-    padding: 0;
-    background-position: top center !important;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    background-attachment: initial !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-    position: relative;
-  }
-  .title-section h1 {
-    position: absolute;
-    top: 10vw;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90vw;
-    font-size: 2.2rem;
-    margin: 0;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-    z-index: 2;
-    padding: 0 1vw;
-    box-sizing: border-box;
-    background: rgba(0,0,0,0.15);
-    border-radius: 8px;
-  }
+    
 }
 .title-section img {
     width: 150px;
@@ -550,39 +465,19 @@ nav .dropdown a:hover {           /* ADD */
 /* pillars section */
 
 .our-pillars-section {
-  position: relative;
-  isolation: isolate;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  background-image: url("Web Images/fisher-picture.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white;
-  min-height: 50vh;
-  height: auto;
-/* Responsive background image for .our-pillars-section */
-@media (max-width: 900px) {
-  .our-pillars-section {
-    min-height: 40vh;
-    padding: 1rem;
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-image: url("web Images/fisher-picture.png"); 
     background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-}
-@media (max-width: 600px) {
-  .our-pillars-section {
-    min-height: 30vh;
-    padding: 0.5rem;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-}
+    background-position: center;
+    color: white;
+    min-height: 50vh;
+    height: auto;
 }
 
 .our-pillars-section::before {
