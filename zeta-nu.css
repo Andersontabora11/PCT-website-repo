@@ -123,18 +123,17 @@
 /* Responsive breakpoints for mobile and tablet, matching index.html */
 @media (max-width: 768px) {
   .zeta-nu-section {
-    min-height: 40vw;
-    height: 40vw;
-    max-height: 60vw;
+    height: 100vh;
+    min-height: 100vh;
     padding: 0;
-    background-position: center center !important;
     background-size: cover !important;
+    background-position: center center !important;
     background-repeat: no-repeat !important;
-    background-attachment: initial !important;
+    background-attachment: fixed !important;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     text-align: center;
     position: relative;
