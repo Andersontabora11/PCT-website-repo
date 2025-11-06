@@ -346,8 +346,21 @@ nav .dropdown a:hover {           /* ADD */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for better readability */
     text-align: center;
     padding: 0 1rem;
-    background-image: url('Web Images/pct-home-image.jpg'); /* Background image */
-    
+  background-image: url('Web Images/pct-home-image.jpg'); /* Background image */
+}
+
+.title-section img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .title-section {
+    background-size: contain !important;
+    background-position: center top !important;
+    min-height: 60vh;
+  }
 }
 .title-section img {
     width: 150px;
@@ -465,30 +478,24 @@ nav .dropdown a:hover {           /* ADD */
 /* pillars section */
 
 .our-pillars-section {
-    position: relative;
-    isolation: isolate;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    background-image: url("web Images/fisher-picture.png"); 
-    background-size: cover;
-    background-position: center;
-    color: white;
-    min-height: 50vh;
-    height: auto;
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-image: url("Web Images/fisher-picture.png"); /* Corrected path */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  min-height: 50vh;
+  height: auto;
 }
 
 .our-pillars-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Dark overlay for better text visibility */
-    z-index: -1;
+  /* Remove gray overlay for clear image */
+  display: none;
 }
 
 
