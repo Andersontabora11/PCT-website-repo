@@ -339,14 +339,30 @@ nav .dropdown a:hover {           /* ADD */
     align-items: center;
     position: relative;
     height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; 
-    color: white; /* White text */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for better readability */
-    text-align: center;
-    padding: 0 1rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white; /* White text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for better readability */
+  text-align: center;
+  padding: 0 1rem;
   background-image: url('Web Images/pct-home-image.jpg'); /* Background image */
+}
+
+.title-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.35); /* Overlay for text readability */
+  z-index: 0;
+}
+.title-section > * {
+  position: relative;
+  z-index: 1;
 }
 
 .title-section img {
