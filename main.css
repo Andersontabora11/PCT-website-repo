@@ -339,6 +339,8 @@ nav .dropdown a:hover {           /* ADD */
       background-position: center top, center center, center bottom;
       background-repeat: no-repeat, no-repeat, repeat;
       background-attachment: fixed, fixed, fixed;
+      height: 100vh;
+      min-height: 100vh;
 }
 
 
@@ -357,14 +359,18 @@ nav .dropdown a:hover {           /* ADD */
   .title-section {
     background-size: contain !important;
     background-position: center top !important;
-    min-height: 80vh !important;
-    height: auto !important;
+    min-height: 100vh !important;
+    max-height: 100vh !important;
+    height: 100vh !important;
     padding-top: 5vh !important;
     padding-bottom: 2vh !important;
     justify-content: center !important;
     align-items: center !important;
     display: flex !important;
     flex-direction: column !important;
+  }
+  .title-section img {
+    display: none !important;
   }
 }
 .title-section img {
