@@ -1,3 +1,90 @@
+/* Campus section styles for involvement */
+.campus-section {
+  width: 100%;
+  margin: 2rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.campus-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.campus-list-box {
+  background: #eaeaea;
+  border-radius: 10px;
+  padding: 1.5rem 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.campus-list {
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  display: block;
+}
+
+.campus-list-bold-italic {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.campus-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.campus-image {
+  width: 80%;
+  max-width: 900px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  margin: 2rem 0;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .campus-list-box {
+    padding: 1rem 0.5rem;
+    font-size: 1rem;
+    width: 100vw;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .campus-heading {
+    font-size: 1.3rem;
+  }
+  .campus-image {
+    width: 98vw;
+    max-width: none;
+    margin: 1rem 0;
+  }
+  .campus-list {
+    width: 100vw;
+    text-align: center;
+  }
+  .campus-list-bold-italic {
+    width: 100vw;
+  }
+}
 /* --- ACHIEVEMENT CARDS DESKTOP STYLES --- */
 .achievements-section {
   display: grid;
