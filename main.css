@@ -423,13 +423,14 @@ nav .dropdown a:hover {           /* ADD */
     
 }
 
-#wyatt-headshot {
-  width: 100%;
-  min-width: 200px;
-  max-width: 300px;
-  height: auto;
-  border-radius: 10px;
+/* President image: Andrew Zalar */
+#andrew-headshot {
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
   box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.5);
+  display: block;
 }
 .bold{
     font-weight: 600;
