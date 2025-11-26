@@ -43,25 +43,20 @@
 }
 
 .rush-feature-text {
-    font-size: 1.18rem;
-    line-height: 1.7;
+    /* Style Rush Requirements like pillar descriptions: no white box, larger type, reduced side gutters */
+    font-size: clamp(1.05rem, 1.9vw, 1.45rem);
+    line-height: 1.6;
     text-align: center;
-    margin-bottom: 2.2rem;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    background: rgba(255,255,255,0.92);
-    border-radius: 32px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-    padding: 2rem 3rem;
-    opacity: 0;
-    transform: translateY(40px) scale(0.98);
-    animation: pull-in 0.7s cubic-bezier(.6,-0.28,.74,.05) 0.1s forwards;
-    transition: box-shadow 0.3s;
-}
-
-.rush-feature-text:hover {
-    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    margin: 0 auto 1.6rem auto;
+    max-width: 1100px;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: clamp(0.6rem, 2.5vw, 1.2rem) 6vw;
+    opacity: 1;
+    transform: none;
+    animation: none;
+    transition: none;
 }
 
 @keyframes pull-in {
@@ -116,6 +111,51 @@
     text-align: center;
     margin-bottom: 2.2rem;
 }
+
+/* Utility/layout classes to replace inline styles in the HTML */
+.section-heading {
+    text-align: center;
+    margin-bottom: 1.2rem;
+    font-weight: 800;
+}
+.section-heading.medium { font-size: 2.2rem; }
+.section-heading.large { font-size: 2.5rem; font-weight:900; margin: 3.5rem 0 2.2rem 0; }
+
+.rush-schedule-universal,
+.rush-schedule-info-sessions {
+    max-width: 900px;
+    margin: 0 auto 2.2rem auto;
+}
+
+.entry-wrapper {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.2rem;
+}
+.date-col {
+    display:flex;
+    align-items:center;
+}
+.date-col .date-inner {
+    display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:90px;padding-top:0.8rem;padding-bottom:0.8rem;
+}
+.date-col .date-inner .date-month {
+    font-weight: bold;
+    font-size: clamp(1rem, 1.8vw, 2rem);
+    text-align: center;
+}
+.date-col .date-inner .date-day {
+    font-weight: bold;
+    font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+    text-align: center;
+}
+.date-col .date-inner.large {
+    padding-top:2.2rem;padding-bottom:2.2rem;margin-top:-2.2rem;
+}
+.entry-content { flex:1;display:flex;flex-direction:column;justify-content:center; }
+.bar-main { flex:1;display:flex;flex-direction:column;justify-content:space-between;padding:2.2rem 1.2rem; }
+.bar-side { display:flex;flex-direction:column;align-items:flex-end;justify-content:flex-start;padding:2.2rem 2.2rem 2.2rem 1.2rem;min-width:120px; }
+.rush-desc { font-size:1.12rem;text-align:left;max-width:700px;margin:0.3rem 0 0 1.2rem;line-height:1.7; }
 
 .rush-schedule-bar {
     background: #e0e0e0;
