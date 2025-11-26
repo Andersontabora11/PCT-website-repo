@@ -93,23 +93,19 @@
 
 .contact-intro {
     margin-top: 2rem;
-    padding: 2rem 3rem;
-    background: rgba(255,255,255,0.92);
-    border-radius: 32px;
-    max-width: 900px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-    text-align: left;
+    padding: 3rem 4rem; /* larger padding to occupy more space */
+    background: none; /* remove white box */
+    border-radius: 0;
+    max-width: 1200px; /* wider content area */
+    box-shadow: none;
+    text-align: center; /* center the intro text like screenshot */
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 4.5rem;
+    margin-bottom: 3.5rem;
     opacity: 0;
-    transform: translateY(40px) scale(0.98);
-    animation: pull-in 0.7s cubic-bezier(.6,-0.28,.74,.05) 0.1s forwards;
-    transition: box-shadow 0.3s;
-}
-
-.contact-intro:hover {
-    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    transform: translateY(20px) scale(0.99);
+    animation: pull-in 0.7s cubic-bezier(.6,-0.28,.74,.05) 0.05s forwards;
+    transition: none;
 }
 
 @keyframes pull-in {
@@ -121,42 +117,43 @@
 
 .contact-headshots {
     display: flex;
-    gap: 2.5rem;
+    gap: 4.5rem; /* increased gap for breathing room */
     justify-content: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .contact-person {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 220px;
+    width: 360px; /* larger card width */
 }
 
 .contact-img {
-    width: 180px;
-    height: 180px;
+    width: 320px;
+    height: 320px;
     object-fit: cover;
-    border-radius: 18px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-    margin-bottom: 0.5rem;
+    object-position: center 45%; /* lower focal point to avoid cropping */
+    border-radius: 20px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+    margin-bottom: 1rem;
 }
 
 .contact-name {
     font-weight: bold;
-    font-size: 1.15rem;
-    margin-top: 1.1rem;
+    font-size: 1.9rem; /* larger name text */
+    margin-top: 1rem;
 }
 
 .contact-email {
-    font-size: 1.05rem;
+    font-size: 1.35rem; /* larger email */
     color: #6a1fae;
-    margin-top: 0.2rem;
-    margin-bottom: 0.2rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
 }
 
 .contact-role {
-    font-size: 1rem;
+    font-size: 1.25rem; /* larger role */
     color: #444;
     margin-bottom: 0.5rem;
 }
