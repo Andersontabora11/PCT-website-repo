@@ -174,8 +174,6 @@
 }
 
 @media (max-width: 900px) {
-<<<<<<< HEAD
-=======
 @media (max-width: 768px) {
             .rush-header-section {
                 min-height: 60vw;
@@ -212,7 +210,6 @@
                 min-height: 3.5em;
             }
 }
->>>>>>> parent of c415f46 (rush info)
     .rush-testimonial-row, .rush-testimonial-row.reverse {
         flex-direction: column;
         align-items: center;
