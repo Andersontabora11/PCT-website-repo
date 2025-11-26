@@ -202,6 +202,34 @@
     }
 }
 
+/* Square featured image for Brotherhood page (match Professionalism) */
+.feature-image .square-img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    /* Shift focal point up so heads aren't cropped */
+    object-position: center 30%;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .feature-image .square-img {
+        width: 220px;
+        height: 220px;
+        object-position: center 25%;
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-image .square-img {
+        width: 160px;
+        height: 160px;
+        object-position: center 20%;
+    }
+}
+
 .professional-carousel-section {
     display: flex;
     flex-direction: column;
