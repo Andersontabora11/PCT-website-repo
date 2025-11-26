@@ -265,29 +265,31 @@
   }
 }
 /* White box styling for Zeta Nu intro, similar to Professionalism page */
+/* Intro text under the banner: remove boxed card and make full-width, larger, centered */
 .zeta-nu-intro {
   margin-top: 2rem;
-  padding: 2rem 3rem;
-  background: rgba(255,255,255,0.92);
-  border-radius: 32px;
-  max-width: 700px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-  text-align: left;
+  padding: 2.5rem 6vw; /* use viewport padding so it breathes on all widths */
+  background: none; /* remove white box */
+  border-radius: 0;
+  max-width: 1200px; /* wider content area */
+  box-shadow: none;
+  text-align: center; /* center like the screenshot */
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2.5rem;
   opacity: 0;
-  transform: translateY(40px) scale(0.98);
-  animation: pull-in 0.7s cubic-bezier(.6,-0.28,.74,.05) 0.1s forwards;
-  transition: box-shadow 0.3s;
-}
-
-.zeta-nu-intro:hover {
-  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  transform: translateY(20px) scale(0.99);
+  animation: pull-in 0.7s cubic-bezier(.6,-0.28,.74,.05) 0.05s forwards;
+  transition: none;
 }
 
 .zeta-nu-feature-text {
   flex: 1;
-  text-align: left;
+  text-align: center; /* center paragraph like Contact page */
+  font-size: 1.25rem; /* increase text size for desktop */
+  line-height: 1.6; /* more readable leading */
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 @keyframes pull-in {
@@ -429,39 +431,26 @@
     }
 }
 
-.why-pct{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem 4rem;
-  min-height: 60vh;
-  height: auto;
-  margin-bottom: -3rem;
-  background: rgba(255,255,255,0.92);
-  border-radius: 32px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
+.why-pct {
+  padding: 2rem 5vw; /* slightly tighter padding */
+  background: none; /* remove white boxed background */
+  border-radius: 0;
+  box-shadow: none;
+  max-width: 920px; /* narrower max-width so lines wrap on wide viewports */
+  margin: 2.25rem auto;
+  text-align: center;
+  font-size: clamp(1.12rem, 1.6vw, 1.28rem); /* slightly larger but responsive */
+  line-height: 1.65;
+  color: #222;
+}
+
 @media (max-width: 768px) {
   .why-pct {
-    padding: 1.2rem 0.7rem;
-    border-radius: 18px;
+    padding: 1rem 4vw;
+    font-size: 0.98rem;
     max-width: 98vw;
-    margin-top: 1.2rem;
-    margin-bottom: 1.2rem;
+    margin: 1rem auto;
   }
-}
-@media (max-width: 768px) {
-  .why-pct {
-    padding: 1.2rem 0.7rem;
-    border-radius: 18px;
-    max-width: 98vw;
-  }
-}
 }
 
 .achievements-section{
@@ -500,22 +489,7 @@
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-  overflow: hidden;
-  border-radius: 10px;
-  /* background: linear-gradient(180deg, #ffffff, #f6f7fb); */
-  box-shadow: 0 6px 18px rgba(0,0,0,.08);
-  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
-
-  /* Internal layout: title / icon / text; text can grow */
-  display: grid;
-  grid-template-rows: auto auto 1fr;
-  gap: clamp(.6rem, 1.2vw, 1rem);
-  padding: clamp(1rem, 2.2vw, 1.5rem);
-justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-}
+  }
 
 
 .achievements-section > .achievement-container:nth-child(1) {
