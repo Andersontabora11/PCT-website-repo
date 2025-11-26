@@ -86,22 +86,38 @@
 }
 /* White box styling for Sponsor Us intro, similar to Professionalism page */
 .sponsor-us-white-box {
-    background: rgba(255,255,255,0.92);
-    border-radius: 32px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-    padding: 2rem 3rem;
-    margin-bottom: 2.2rem;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    opacity: 0;
-    transform: translateY(40px) scale(0.98);
-    animation: pull-in 0.7s cubic-bezier(.6,-0.28,.74,.05) 0.1s forwards;
-    transition: box-shadow 0.3s;
+    /* Pillar-style description: centered, responsive type, no white box */
+    margin: 0 auto 1.6rem auto;
+    max-width: 1100px;
+    /* reduce horizontal padding so description can use more width */
+    padding: clamp(0.6rem, 2.5vw, 1.2rem) 4vw;
+    text-align: center;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: clamp(1.05rem, 1.9vw, 1.45rem);
+    line-height: 1.6;
+    opacity: 1;
+    transform: none;
+    animation: none;
+    transition: none;
 }
 
-.sponsor-us-white-box:hover {
-    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+/* Large heading inside the description */
+.sponsor-us-white-box .bold {
+    display: block;
+    margin-bottom: 1.2rem;
+    font-size: clamp(1.25rem, 2.8vw, 2.2rem);
+}
+
+/* Paragraph/description inside the box */
+.sponsor-us-white-box > div {
+    font-size: clamp(1rem, 1.9vw, 1.15rem);
+    /* Allow description to take more horizontal space; override inline max-width if present */
+    max-width: 100% !important;
+    width: min(100%, 980px) !important;
+    margin: 0 auto;
+    padding: 0 0.5rem;
 }
 /* Styles for Sponsor Us page (copied and adapted from sponsors.css) */
 
