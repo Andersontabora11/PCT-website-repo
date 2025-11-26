@@ -57,10 +57,16 @@
 
 .feature-text {
     flex: 1;
-    text-align: left;
+    text-align: center; /* center body copy under banner */
+    font-size: clamp(1.12rem, 1.8vw, 1.36rem); /* larger, responsive text */
+    line-height: 1.7;
+    max-width: 920px; /* control line length on very wide screens */
+    margin: 0 auto;
 }
 .feature-text span[style*="font-weight: bold;"] {
-    font-size: 1.25rem;
+    font-size: clamp(1.18rem, 1.6vw, 1.4rem);
+    display: block;
+    margin-bottom: 0.6rem;
 }
 .feature-text h3 {
     font-size: 2rem;
@@ -176,23 +182,18 @@
 }
 
 .professional-intro {
-    margin-top: 2rem;
-    padding: 2rem 3rem;
-    background: rgba(255,255,255,0.92);
-    border-radius: 32px;
-    max-width: 700px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-    text-align: left;
+    margin-top: 1.5rem;
+    padding: 2.5rem 6vw; /* viewport padding for breathing room */
+    background: none; /* remove white boxed background to match Contact page */
+    border-radius: 0;
+    max-width: 1100px; /* allow wider centered content */
+    box-shadow: none;
+    text-align: center; /* center like Contact page */
     margin-left: auto;
     margin-right: auto;
-    opacity: 0;
-    transform: translateY(40px) scale(0.98);
-    animation: pull-in 0.7s cubic-bezier(.6,-0.28,.74,.05) 0.1s forwards;
-    transition: box-shadow 0.3s;
-}
-
-.professional-intro:hover {
-    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    /* make intro static: no entrance animation, always visible */
+    opacity: 1;
+    transform: none;
 }
 
 @keyframes pull-in {
@@ -219,6 +220,19 @@
         width: 220px;
         height: 220px;
         object-position: center 25%;
+    }
+}
+
+@media (max-width: 768px) {
+    .professional-intro {
+        padding: 1.2rem 4vw;
+        max-width: 98vw;
+        margin-top: 1rem;
+    }
+    .feature-text {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 0 1rem;
     }
 }
 
