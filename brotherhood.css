@@ -37,15 +37,13 @@
         right: 0;
         transform: translateY(-50%);
         width: 100vw;
-        font-size: clamp(1.2rem, 6vw, 2.2rem);
+        font-size: clamp(1rem, 5vw, 2rem);
         margin: 0 auto;
         color: white;
         text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
         z-index: 2;
         padding: 0 5vw;
         box-sizing: border-box;
-        word-wrap: break-word;
-        hyphens: auto;
     }
     .professional-intro {
         padding: 1.2rem 1rem;
