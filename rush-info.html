@@ -19,6 +19,11 @@
                     <a href="index.html">Phi Chi Theta</a>
                 </div>
             </div>
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <div class="nav-links">
                 <ul>
                     <li>
@@ -284,6 +289,18 @@
         </div>
     </footer>
     <script>
+        // Hamburger menu toggle
+        const navbarToggle = document.querySelector('.navbar-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (navbarToggle) {
+            navbarToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                navbarToggle.classList.toggle('active');
+            });
+        }
+
+        // FAQ dropdown functionality
         document.querySelectorAll('.faq-toggle').forEach(function(btn) {
             btn.addEventListener('click', function() {
                 var parent = btn.parentElement;
