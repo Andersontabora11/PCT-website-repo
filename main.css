@@ -393,7 +393,9 @@ nav .dropdown a:hover {           /* ADD */
     flex-direction: column !important;
   }
   .title-section img.reveal {
-    display: none !important;
+    display: block !important;
+    width: 120px !important;
+    margin-bottom: 0.5rem !important;
   }
 }
 .title-section img.reveal {
