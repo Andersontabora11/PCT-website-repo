@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hero Crop Preview</title>
+  <style>
+    :root { --hero: url('Web Images/hero.jpg'); --overlay: rgba(0,0,0,0.25); }
+    body{ font-family: system-ui, -apple-system, Arial; background:#f3f3f3; padding:24px; }
+    h1{ font-size:18px; margin-bottom:12px }
+    .row{ display:flex; gap:16px; align-items:flex-start; flex-wrap:wrap }
+    .preview{ position:relative; width:360px; height:640px; border-radius:8px; overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,0.12); background:var(--overlay) var(--hero) center center / cover no-repeat; }
+    .preview.desktop{ width:1200px; height:600px; }
+    .preview.tablet{ width:900px; height:600px; }
+    .preview.mobile{ width:360px; height:640px; }
+
+    /* safe area overlay: shows central area that will remain visible under common aspect ratios */
+    .safe-area{
+      position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+      width:66%; height:44%; border:2px dashed rgba(255,255,255,0.95); box-shadow:0 2px 6px rgba(0,0,0,0.4) inset; pointer-events:none;
+    }
+
+    .label{ position:absolute; left:8px; bottom:8px; background:rgba(0,0,0,0.5); color:white; padding:6px 8px; border-radius:6px; font-size:13px }
+
+    /* controls */
+    .controls{ margin-top:16px; display:flex; gap:8px; align-items:center; flex-wrap:wrap }
+    .controls input{ padding:6px 8px; border-radius:6px; border:1px solid #ddd }
+    .note{ margin-top:12px; color:#333; max-width:900px }
+
+    /* apply variable-driven background-position via inline style on root preview elements */
+  </style>
+</head>
+<body>
+  <h1>Hero crop preview</h1>
+  <p>Open this file locally to preview how `Web Images/hero.jpg` will be cropped at different viewport sizes. Adjust the focal point below to preserve faces or other important elements.</p>
+
+  <div class="controls">
+    <label>Focal point (background-position):
+      <input id="pos" value="center center" style="width:160px">
+    </label>
+    <button id="apply">Apply</button>
+    <button id="reset">Reset</button>
+  </div>
+
+  <div class="row" style="margin-top:16px">
+    <div>
+      <div class="preview desktop" id="desktop"></div>
+      <div class="label">Desktop (1200×600)</div>
+    </div>
+
+    <div>
+      <div class="preview tablet" id="tablet"></div>
+      <div class="label">Tablet (900×600)</div>
+    </div>
+
+    <div>
+      <div class="preview mobile" id="mobile"></div>
+      <div class="label">Mobile (360×640)</div>
+    </div>
+  </div>
+
+  <p class="note">The dashed rectangle marks a conservative "safe area" that will likely remain visible across many aspect ratios. Tweak the focal point until important subject(s) (faces/logos) fall inside that box for all three previews.</p>
+
+  <script>
+    const inputs = {desktop: document.getElementById('desktop'), tablet: document.getElementById('tablet'), mobile: document.getElementById('mobile')};
+    const posInput = document.getElementById('pos');
+    function apply(pos){
+      for(const k in inputs){
+        inputs[k].style.background = "var(--overlay) var(--hero) " + pos + " / cover no-repeat";
+        // add safe area overlay element
+        inputs[k].innerHTML = '<div class="safe-area"></div>';
+      }
+    }
+    document.getElementById('apply').addEventListener('click', ()=> apply(posInput.value.trim() || 'center center'));
+    document.getElementById('reset').addEventListener('click', ()=>{ posInput.value='center center'; apply('center center') });
+    // initial
+    apply(posInput.value);
+  </script>
+</body>
+</html>

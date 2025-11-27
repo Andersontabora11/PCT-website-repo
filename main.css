@@ -5,6 +5,8 @@
   --color-text: navy;
   --color-bg: rgb(255, 255, 255);
   --color-bg-accent: #ffffff;
+  /* Hero focal point: change this to shift the crop (e.g. "center center", "center top", "30% 40%") */
+  --hero-position: center center;
   --size: clamp(7.5rem, 14vw, 30rem);
   --gap: clamp(12px, 3vw, 40px);
   --duration: 60s;
@@ -238,7 +240,7 @@ nav .nav-links ul li > a:hover {
 }
 
 
-.logo-text p {
+logo-text p {
     color: white;
     font-weight: 500;
 }
@@ -256,11 +258,11 @@ nav .dropdown {                   /* ADD */
   list-style: none;
   box-shadow: 0 8px 24px rgba(0,0,0,0.25);
 
-  max-width: min(90vw, 720px);            /* NEW: never wider than viewport */
-  display: flex;                          /* NEW: horizontal layout */
-  flex-wrap: wrap;                        /* NEW: wrap to a new row if needed */
-  gap: 8px;                               /* NEW: spacing between items */
-  white-space: normal;                    /* NEW: allow wrapping */
+  max-width: min(90vw, 720px);            /* never wider than viewport */
+  display: flex;                          /* horizontal layout */
+  flex-wrap: wrap;                        /* wrap to a new row if needed */
+  gap: 8px;                               /* spacing between items */
+  white-space: normal;                    /* allow wrapping */
   overflow: visible;
 
   opacity: 0;
@@ -269,6 +271,42 @@ nav .dropdown {                   /* ADD */
   pointer-events: none;
   transition: opacity .2s ease, transform .2s ease, visibility .2s;
   z-index: 1000;                  /* above page content */
+}
+
+/* Hero image as an actual element so it's never cropped; it will scale to fit while preserving the full image */
+.title-section .hero-image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  /* Fill the hero area so there are no letterbox borders. This uses cover (may crop edges) */
+  object-fit: cover;
+  object-position: var(--hero-position, center center);
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 0;
+  pointer-events: none; /* allow clicks to pass through */
+  filter: none;
+}
+
+/* Gradient overlay on top of the image to preserve contrast for text */
+.title-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25));
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Ensure reveal elements and text sit above the overlay */
+.title-section .reveal,
+.title-section h1,
+.title-section h2 {
+  position: relative;
+  z-index: 2;
 }
 
 /* Show on hover (and keyboard focus) */
@@ -317,34 +355,20 @@ nav .dropdown a:hover {           /* ADD */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  position: relative;
-  height: 60vw;
-  min-height: 600px;
-  padding-top: 8vh;
-  padding-bottom: 0;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+    position: relative;
+    height: 100vh;
+    min-height: 100vh;
+    padding-top: 8vh;
+    padding-bottom: 0;
     color: white; /* White text */
     text-shadow: 2px 2px 4px #0000004d; /* Text shadow for better readability */
     text-align: center;
     padding: 0 1rem;
-  min-height: 0;
-      background-image:
-        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-        url('Web Images/pct-home-image.jpg'),
-        url('Web Images/Yuvi Overhaul/Professionalism/6-PhotoCarousel6.png');
-      background-size: cover, cover, cover;
-      background-position: center top, center center, center bottom;
-      background-repeat: no-repeat, no-repeat, repeat;
-      background-attachment: fixed, fixed, fixed;
-      height: 100vh;
-      min-height: 100vh;
+    overflow: hidden; /* keep hero image contained */
 }
 
 
-.title-section img {
+.title-section img.reveal {
   width: 150px;
   height: auto;
   margin-top: 0;
@@ -357,8 +381,7 @@ nav .dropdown a:hover {           /* ADD */
 
 @media (max-width: 600px) {
   .title-section {
-    background-size: contain !important;
-    background-position: center top !important;
+    /* Keep the image visible and centered; text can resize/stack as needed */
     min-height: 100vh !important;
     max-height: 100vh !important;
     height: 100vh !important;
@@ -369,14 +392,14 @@ nav .dropdown a:hover {           /* ADD */
     display: flex !important;
     flex-direction: column !important;
   }
-  .title-section img {
+  .title-section img.reveal {
     display: none !important;
   }
 }
-.title-section img {
-    width: 150px;
-    height: auto;
-    margin-bottom: 1rem;
+.title-section img.reveal {
+  width: 150px;
+  height: auto;
+  margin-bottom: 1rem;
 }
 
 .title-section h1 {
@@ -388,6 +411,33 @@ nav .dropdown a:hover {           /* ADD */
 .title-section h2{
     font-size: 2rem;
     font-weight: 400;
+}
+
+/* Responsive heading adjustments so text doesn't overlay centered faces
+   - Shrink the type and push the headings down on narrower viewports
+   - Tweak the `margin-top` values if you want the headings higher/lower */
+@media (max-width: 900px) {
+  .title-section h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+    /* push down below the central area where faces are located */
+    margin-top: 36vh;
+    margin-bottom: 0.25rem;
+  }
+  .title-section h2 {
+    font-size: clamp(1.1rem, 4.5vw, 1.6rem);
+    margin-top: 0.4rem;
+    line-height: 1.15;
+  }
+}
+
+@media (max-width: 600px) {
+  .title-section h1 {
+    font-size: clamp(1.6rem, 9.5vw, 2.4rem);
+    margin-top: 30vh; /* slightly less push on smaller phones to keep heading visible */
+  }
+  .title-section h2 {
+    font-size: clamp(1rem, 4.8vw, 1.4rem);
+  }
 }
 
 /* add rising effect for scrolling & loading in */
