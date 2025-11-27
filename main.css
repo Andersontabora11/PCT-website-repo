@@ -23,6 +23,12 @@
   font-family: 'PT Serif', sans-serif;
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
 
 
 /* Navigation bar */
