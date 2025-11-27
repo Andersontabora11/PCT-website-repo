@@ -1,24 +1,101 @@
 /* Responsive breakpoints for mobile and tablet, matching index.html */
 @media (max-width: 768px) {
-    .brotherhood-section {
-        height: auto;
+    .professional-section {
+        height: 50vh;
+        min-height: 300px;
         padding: 1.2rem;
         background-position: center 60%;
+        background-attachment: scroll;
     }
-    .brotherhood-section h1 {
+    .professional-section h1 {
         font-size: 2.2rem;
         margin-bottom: 0.5rem;
     }
-    .brotherhood-intro {
+    .professional-intro {
         padding: 1.2rem 1rem;
         font-size: 1rem;
         max-width: 98vw;
     }
+
+    /* Stack events vertically on mobile */
+    .events-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        padding: 0 1rem;
+    }
+
+    .signature-event {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Feature section mobile */
+    .feature-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .feature-image {
+        order: -1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Carousel mobile */
+    .carousel-main-image {
+        height: 250px;
+        max-width: 100%;
+    }
+
+    .carousel-thumbnails {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .carousel-thumb {
+        width: 60px;
+        height: 45px;
+    }
 }
 
 @media (max-width: 480px) {
-    .brotherhood-section h1 {
-        font-size: 1.5rem;
+    .professional-section {
+        height: 40vh;
+        min-height: 250px;
+    }
+
+    .professional-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .events-section h2 {
+        font-size: 2rem;
+    }
+
+    .circular-img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .img-fade-container {
+        width: 220px;
+        height: 220px;
+    }
+
+    .signature-event {
+        width: 220px;
+    }
+
+    .carousel-main-image {
+        height: 200px;
+    }
+
+    .carousel-thumb {
+        width: 50px;
+        height: 38px;
     }
 }
 /* Duplicate of professionalism.css for Philanthropy section. Update styles as needed. */
