@@ -1,13 +1,25 @@
 /* Responsive breakpoints for mobile and tablet, matching index.html */
 @media (max-width: 768px) {
     .rush-header-section {
-        height: auto;
-        padding: 1.2rem;
-        background-position: center 60%;
+        height: 100vh;
+        min-height: 100vh;
+        padding: 0;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        background-attachment: initial !important;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        position: relative;
     }
     .rush-header-section h1 {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
         margin-bottom: 0.5rem;
+        padding: 0 1rem;
     }
     .rush-schedule-intro {
         padding: 1.2rem 1rem;
@@ -30,7 +42,15 @@
 
 @media (max-width: 480px) {
     .rush-header-section h1 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        padding: 0 0.5rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .rush-header-section h1 {
+        font-size: 1.1rem;
+        padding: 0 0.5rem;
     }
 }
 /* White box styling for Rush Schedule intro, similar to Professionalism page */
