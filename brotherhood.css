@@ -104,7 +104,7 @@
     }
 
     .professional-section h1 {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
     }
 
     .events-section h2 {
@@ -132,6 +132,12 @@
     .carousel-thumb {
         width: 50px;
         height: 38px;
+    }
+}
+
+@media (max-width: 360px) {
+    .professional-section h1 {
+        font-size: 1.1rem;
     }
 }
 /* Duplicate of professionalism.css for Philanthropy section. Update styles as needed. */
