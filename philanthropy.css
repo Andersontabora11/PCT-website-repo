@@ -64,14 +64,16 @@
 
 @media (max-width: 480px) {
     .professional-section h1 {
-        font-size: 1.3rem;
+        /* match Professionalism mobile sizing for consistency */
+        font-size: 1.1rem;
         padding: 0 0.5rem;
     }
 }
 
 @media (max-width: 360px) {
     .professional-section h1 {
-        font-size: 1.1rem;
+        /* match Professionalism very small screens */
+        font-size: 0.95rem;
         padding: 0 0.5rem;
     }
 }
