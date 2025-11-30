@@ -401,7 +401,8 @@ nav .dropdown a:hover {           /* ADD */
   .title-section img.reveal {
     display: block !important;
     width: 120px !important;
-    margin-bottom: 0.25rem !important;
+    margin-bottom: 1rem !important;
+    margin-top: 0 !important;
   }
 }
 .title-section img.reveal {
@@ -441,10 +442,12 @@ nav .dropdown a:hover {           /* ADD */
 @media (max-width: 600px) {
   .title-section h1 {
     font-size: clamp(1.6rem, 9.5vw, 2.4rem);
-    margin-top: 30vh; /* slightly less push on smaller phones to keep heading visible */
+    margin-top: 0 !important;
+    margin-bottom: 0.5rem;
   }
   .title-section h2 {
     font-size: clamp(1rem, 4.8vw, 1.4rem);
+    margin-top: 0;
   }
 }
 
