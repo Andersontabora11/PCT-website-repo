@@ -15,6 +15,7 @@
         align-items: center;
         text-align: center;
         position: relative;
+        z-index: 1;
     }
     .rush-header-section h1 {
         font-size: 1.8rem;
@@ -95,11 +96,12 @@
     height: 70vh;
     background-size: cover;
     background-position: center 55%;
-    background-attachment: fixed; 
+    background-attachment: fixed;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     text-align: center;
     padding: 0 1rem;
+    z-index: 1;
 }
 
 .rush-header-section h1 {
