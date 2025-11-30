@@ -37,7 +37,7 @@
         right: 0;
         transform: translateY(-50%);
         width: 100vw;
-        font-size: clamp(1rem, 5vw, 2rem);
+        font-size: clamp(1rem, 4.2vw, 1.6rem);
         margin: 0 auto;
         color: white;
         text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
@@ -104,7 +104,7 @@
     }
 
     .professional-section h1 {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 
     .events-section h2 {
@@ -137,7 +137,7 @@
 
 @media (max-width: 360px) {
     .professional-section h1 {
-        font-size: 1.1rem;
+        font-size: 0.95rem;
     }
 }
 .professional-carousel-section {
