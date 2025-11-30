@@ -31,19 +31,26 @@
         max-width: 100vw;
     }
     .professional-section h1 {
+        /* Consistent zeta-nu style: vertically centered, fluid size, translucent background */
         position: absolute;
         top: 50%;
         left: 0;
         right: 0;
         transform: translateY(-50%);
         width: 100vw;
-        font-size: clamp(1rem, 5vw, 2rem);
+        font-size: clamp(1.5rem, 8vw, 2.5rem);
         margin: 0 auto;
         color: white;
         text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
         z-index: 2;
         padding: 0 5vw;
         box-sizing: border-box;
+        background: rgba(0,0,0,0.15);
+        border-radius: 8px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .professional-intro {
         padding: 1.2rem 1rem;
