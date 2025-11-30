@@ -37,8 +37,9 @@
         left: 0;
         right: 0;
         transform: translateY(-50%);
-        width: 100vw;
-        font-size: clamp(1.5rem, 8vw, 2.5rem);
+    width: 100vw;
+    /* reduced fluid range so headers are smaller on mobile */
+    font-size: clamp(1.2rem, 6vw, 2rem);
         margin: 0 auto;
         color: white;
         text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
@@ -231,7 +232,8 @@
 }
 
 .professional-section h1 {
-    font-size: 4rem;
+    /* Smaller, responsive hero heading to match other pillars */
+    font-size: clamp(2.4rem, 5vw, 3.2rem);
     margin-bottom: 0rem;
     font-weight: 600;
 }
