@@ -17,23 +17,24 @@
         position: relative;
     }
     .professional-section h1 {
-        /* Use the same responsive hero style as zeta-nu so long titles fit on mobile */
+        /* Use the same responsive hero style as zeta-nu; reduce sizing so it fits small viewports */
         position: absolute;
         top: 50%;
         left: 0;
         right: 0;
         transform: translateY(-50%);
-    width: 100vw;
-    /* reduced fluid range so headers are smaller on mobile */
-    font-size: clamp(1.2rem, 6vw, 2rem);
+        width: 100vw;
+        /* smaller clamp so long titles wrap and fit on mobile */
+        font-size: clamp(1rem, 5.2vw, 1.6rem);
         margin: 0 auto 0.5rem auto;
         color: white;
         text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
         z-index: 2;
         padding: 0 5vw;
         box-sizing: border-box;
-        background: rgba(0,0,0,0.15);
-        border-radius: 8px;
+    /* remove translucent box on mobile */
+    background: none;
+    border-radius: 0;
         text-align: center;
         display: flex;
         align-items: center;
@@ -64,16 +65,16 @@
 
 @media (max-width: 480px) {
     .professional-section h1 {
-        /* match Professionalism mobile sizing for consistency */
-        font-size: 1.1rem;
+        /* smaller so the title fits better on most phones */
+        font-size: 0.95rem;
         padding: 0 0.5rem;
     }
 }
 
 @media (max-width: 360px) {
     .professional-section h1 {
-        /* match Professionalism very small screens */
-        font-size: 0.95rem;
+        /* tighten on very small devices */
+        font-size: 0.85rem;
         padding: 0 0.5rem;
     }
 }

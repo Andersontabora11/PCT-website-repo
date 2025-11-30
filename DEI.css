@@ -46,8 +46,9 @@
         z-index: 2;
         padding: 0 5vw;
         box-sizing: border-box;
-        background: rgba(0,0,0,0.15);
-        border-radius: 8px;
+    /* remove translucent box on mobile */
+    background: none;
+    border-radius: 0;
         text-align: center;
         display: flex;
         align-items: center;
