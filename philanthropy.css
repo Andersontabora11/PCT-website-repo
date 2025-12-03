@@ -64,17 +64,16 @@
 
     /* Carousel mobile */
     .carousel-main-image {
-        height: 250px;
+        height: auto;
         max-width: 100%;
     }
 
     /* Show full photo on mobile instead of center-cropping */
     .carousel-main-image img {
         width: 100% !important;
-        height: 100% !important;
+        height: auto !important;
         object-fit: contain !important;
         object-position: center !important;
-        background-color: #000 !important;
     }
 
     .carousel-thumbnails {
@@ -96,7 +95,7 @@
     }
 
     .carousel-main-image {
-        height: 200px;
+        height: auto;
     }
 
     .carousel-thumb {
