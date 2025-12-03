@@ -206,10 +206,11 @@
 
 .risk-prevention .standards-container .leadership-member{
   max-width: 300px; /* match .leadership-member sizing */
-  width: 300px;
+  width: 100%; /* allow responsiveness; constrained by max-width */
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center; /* center names under images */
 }
 
 .risk-prevention .standards-container .img-wrapper{
@@ -221,7 +222,7 @@
 
 .risk-prevention .standards-container .img-wrapper > img{
   display: block;
-  width: 300px;
+  width: 100%; /* fill wrapper width so it scales */
   height: 100%;
   object-fit: cover;
   object-position: center 20%;
@@ -244,20 +245,30 @@
 }
 
 @media (max-width: 630px){
+  /* Stack standards cards and center on small screens */
   .risk-prevention .standards-container{
-    grid-template-columns: 1fr; /* then 1 col at the next breakpoint */
+    flex-direction: column;
+    align-items: center;
     gap: calc(var(--gap) * .75);
-    padding: 3.5rem;
+    padding: 2rem 1.2rem;
   }
-}
 
-@media (max-width: 630px){
-  .risk-prevention .standards-container .img-wrapper{
-    height: auto;
-    aspect-ratio: 1 / 1;   /* or 3 / 4 */
+  .risk-prevention .standards-container .leadership-member{
+    width: 90%;
+    max-width: 340px; /* allow larger image boxes on mobile */
   }
+
+  .risk-prevention .standards-container .img-wrapper{
+    height: 340px; /* larger, consistent preview box */
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
   .risk-prevention .standards-container .img-wrapper > img{
+    width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -277,7 +288,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
+    align-items: flex-start;
 
     padding: 10px 20px;
     max-width: 600px;
@@ -294,6 +305,33 @@
   }
   .advisor-container img{
     max-width: 150px;
+  }
+}
+
+/* Mobile: stack advisor image above text and remove negative margins */
+@media (max-width: 630px) {
+  .advisor-container{
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 12px;
+    margin-top: 0; /* remove negative offset that caused overlap */
+    margin-bottom: 0;
+  }
+
+  .advisor-container .advisor-text{
+    align-items: center; /* center text under image */
+    text-align: center;
+    padding: 10px 12px;
+    max-width: 100%;
+  }
+
+  .advisor-container img{
+    max-width: 230px;
+    width: 70%;
+    height: auto;
+    margin-left: 0;
+    margin-bottom: 1rem;
+    border-radius: 10px;
   }
 }
 
