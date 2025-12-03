@@ -97,13 +97,15 @@
     animation: marquee 9.6s linear infinite;
 }
 .logo {
-    height: 202px;
-    width: 403px;
-    object-fit: contain;
+    /* Square sponsor card */
+    width: 220px;
+    height: 220px;
+    display: block;
+    object-fit: contain; /* ensure logo scales inside the square */
     border-radius: 18px;
     background: #fff;
     box-shadow: 0 2px 16px rgba(0,0,0,0.10);
-    padding: 2.2rem 3.6rem;
+    padding: 1rem; /* small padding so logos breathe but remain square */
 }
 
 /* Remove custom margins for uniform spacing */
