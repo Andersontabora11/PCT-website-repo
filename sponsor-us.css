@@ -62,7 +62,8 @@
         height: 80vw !important;
         max-height: 220px;
         object-fit: cover !important;
-        object-position: center 45% !important; /* lower focal point on mobile */
+        /* nudge focal point so the tops of heads remain visible on narrow phones */
+        object-position: center 35% !important;
         border-radius: 18px;
         box-shadow: 0 2px 16px rgba(0,0,0,0.10);
         margin-bottom: 1.2rem;
@@ -204,12 +205,26 @@
         max-width: 100%;
         max-height: 325px;
         object-fit: cover !important;
-        object-position: center 45% !important; /* lower focal point so top of head is visible */
+        object-position: center 45% !important; /* keep slightly lower focal point on larger screens */
         border-radius: 20px;
         box-shadow: 0 6px 36px rgba(0,0,0,0.14);
         margin-bottom: 0.9rem;
     }
 
+
+/* Style phone numbers: prefer plain purple text and neutralize tel links on mobile */
+.phone {
+    color: #6a1b9a; /* purple */
+    text-decoration: none;
+}
+
+/* If the browser auto-converts numbers to tel links, make them non-interactive and purple */
+a[href^="tel"] {
+    color: #6a1b9a !important;
+    text-decoration: none !important;
+    pointer-events: none !important;
+    cursor: default !important;
+}
     .sponsor-headshot-person div {
         text-align: center;
         font-size: 1.6rem;
