@@ -259,8 +259,10 @@
   }
 
   .risk-prevention .standards-container .img-wrapper{
-    height: 340px; /* larger, consistent preview box */
+    /* Use a square aspect ratio on mobile so images remain square */
+    aspect-ratio: 1 / 1;
     width: 100%;
+    max-width: 340px; /* keep a sensible maximum */
     border-radius: 12px;
     overflow: hidden;
   }
