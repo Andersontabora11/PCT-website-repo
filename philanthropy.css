@@ -61,6 +61,31 @@
         /* limit to a reasonable card width so it centers like Professionalism */
         max-width: 300px;
     }
+
+    /* Carousel mobile */
+    .carousel-main-image {
+        height: 250px;
+        max-width: 100%;
+    }
+
+    /* Show full photo on mobile instead of center-cropping */
+    .carousel-main-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        background-color: #000;
+    }
+
+    .carousel-thumbnails {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .carousel-thumb {
+        width: 60px;
+        height: 45px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -68,6 +93,15 @@
         /* smaller so the title fits better on most phones */
         font-size: 0.75rem;
         padding: 0 0.5rem;
+    }
+
+    .carousel-main-image {
+        height: 200px;
+    }
+
+    .carousel-thumb {
+        width: 50px;
+        height: 38px;
     }
 }
 
@@ -317,15 +351,6 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 1.5rem;
-
-    /* Show full photo on mobile instead of center-cropping */
-    .carousel-main-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        object-position: center;
-        background-color: #000;
-    }
 }
 .carousel-main-image img {
     width: 100%;
