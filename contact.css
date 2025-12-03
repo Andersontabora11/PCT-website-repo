@@ -51,7 +51,9 @@
     .contact-img {
         width: 80vw !important;
         max-width: 220px;
+        aspect-ratio: 1 / 1; /* make headshots square on mobile */
         height: auto !important;
+        object-fit: cover !important;
     }
     .contact-intro {
         padding: 1.2rem 1rem;
