@@ -227,7 +227,7 @@
     position: relative;
     filter: none !important;
     opacity: 1 !important;
-    background-image: url('Web Images/Zeta%20nu%20pic.png');
+    background-image: url('Web Images/3-ZetaNuChapter.JPEG');
   }
   .zeta-nu-section h1 {
     position: absolute;
@@ -312,7 +312,7 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for better readability */
     text-align: center;
     padding: 0 1rem;
-    background-image: url('Web Images/Zeta nu pic.png');
+    background-image: url('Web Images/3-ZetaNuChapter.JPEG');
 }
 
 .zeta-nu-section h1 {
@@ -643,4 +643,26 @@
     border-radius: 10px;
     padding: 2rem 0;
 }
+}
+
+/* Strong mobile override: remove any card/white background around the campus image */
+@media (max-width: 900px) {
+  .campus-section .campus-image-container,
+  .campus-section .campus-image-container > div,
+  .campus-section .campus-image-container > * {
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+  .campus-section .campus-image {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 12px !important;
+    width: 98vw !important;
+    max-width: 98vw !important;
+    margin: 0.6rem 0 !important;
+    display: block !important;
+  }
 }
