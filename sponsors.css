@@ -96,16 +96,25 @@
     align-items: center;
     animation: marquee 9.6s linear infinite;
 }
-.logo {
-    /* Square sponsor card */
+.logo-card{
+    /* Square sponsor card wrapper */
     width: 220px;
     height: 220px;
-    display: block;
-    object-fit: contain; /* ensure logo scales inside the square */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 18px;
     background: #fff;
     box-shadow: 0 2px 16px rgba(0,0,0,0.10);
-    padding: 1rem; /* small padding so logos breathe but remain square */
+    padding: 0.75rem; /* breathing room for logos */
+    box-sizing: border-box;
+}
+
+.logo-card .logo{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    object-fit: contain; /* ensure logo scales inside the square */
 }
 
 /* Remove custom margins for uniform spacing */
