@@ -117,6 +117,25 @@
     object-fit: contain; /* ensure logo scales inside the square */
 }
 
+/* Mobile tweaks: make cards smaller and gaps tighter so they don't dominate the viewport */
+@media (max-width: 768px) {
+    .marquee__group { gap: 1.5rem; }
+    .logo-card{
+        width: min(36vw, 160px);
+        height: min(36vw, 160px);
+        padding: 0.5rem;
+    }
+    .logo-card .logo{ max-width: 90%; max-height: 90%; }
+
+    /* override manual margins that previously offset some logos */
+    .logo[alt="Reafco Logo"],
+    .logo[alt="EY Logo"],
+    .logo[alt="Bain Logo"] {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
 /* Remove custom margins for uniform spacing */
 .logo[alt="Reafco Logo"],
 .logo[alt="EY Logo"],
