@@ -54,6 +54,8 @@
         aspect-ratio: 1 / 1; /* make headshots square on mobile */
         height: auto !important;
         object-fit: cover !important;
+        /* nudge focal point down slightly so tops of heads are visible */
+        object-position: center 35% !important;
     }
     .contact-intro {
         padding: 1.2rem 1rem;
