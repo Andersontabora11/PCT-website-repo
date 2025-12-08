@@ -1,9 +1,9 @@
 /* Responsive breakpoints for mobile and tablet, matching index.html */
 @media (max-width: 768px) {
     .members-section {
-        min-height: 40vw;
-        height: 40vw;
-        max-height: 60vw;
+        min-height: 65vw;
+        height: 65vw;
+        max-height: 80vw;
         padding: 1.2rem;
         background-size: cover !important;
         background-position: center center !important;
