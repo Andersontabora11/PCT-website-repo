@@ -465,10 +465,32 @@
 }
 
 @media (max-width: 768px){
-  .achievements-section{ 
-    grid-template-columns: repeat(2, minmax(0,1fr)); 
-    margin: 2rem;
-}
+  .achievements-section{
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    max-width: 380px;
+  }
+  .achievement-container {
+    min-height: 420px;
+    max-width: 100%;
+    padding: 2rem 1.5rem;
+  }
+  .achievement-container h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  .achievement-container img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1rem;
+  }
+  .achievement-container p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    padding: 0 1rem;
+  }
   .zeta-nu-section {
     background-attachment: scroll !important;
     background-size: cover;
@@ -498,6 +520,7 @@
     align-items: center !important;
     justify-content: center !important;
   }
+}
 
 
 .achievements-section > .achievement-container:nth-child(1) {
@@ -642,7 +665,6 @@
     height: auto;
     border-radius: 10px;
     padding: 2rem 0;
-}
 }
 
 /* Strong mobile override: remove any card/white background around the campus image */
