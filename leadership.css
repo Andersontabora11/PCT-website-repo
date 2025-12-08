@@ -1,8 +1,9 @@
-/* Responsive breakpoints for mobile and tablet, matching index.html */
+/* Responsive breakpoints for mobile and tablet, matching nationals page */
 @media (max-width: 768px) {
   .leadership-section {
-    height: 100vh;
-    min-height: 100vh;
+    min-height: 40vw;
+    height: 40vw;
+    max-height: 60vw;
     padding: 0;
     background-size: cover !important;
     background-position: center center !important;
@@ -23,15 +24,15 @@
     right: 0;
     transform: translateY(-50%);
     width: 100vw;
-    font-size: clamp(1.2rem, 6vw, 2rem);
+    font-size: clamp(1.5rem, 8vw, 2.0rem);
     margin: 0 auto;
     color: white;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
     z-index: 2;
     padding: 0 5vw;
     box-sizing: border-box;
-    background: none;
-    border-radius: 0;
+    background: rgba(0,0,0,0.15);
+    border-radius: 8px;
     text-align: center;
     display: flex;
     align-items: center;
