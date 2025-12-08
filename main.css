@@ -388,9 +388,9 @@ nav .dropdown a:hover {           /* ADD */
 @media (max-width: 600px) {
   .title-section {
     /* Increased height to show more of the group photo */
-    min-height: 65vw !important;
-    max-height: 80vw !important;
-    height: 65vw !important;
+    min-height: 70vw !important;
+    max-height: 90vw !important;
+    height: 70vw !important;
     padding-top: 5vh !important;
     padding-bottom: 2vh !important;
     justify-content: center !important;
@@ -400,8 +400,8 @@ nav .dropdown a:hover {           /* ADD */
   }
   .title-section img.reveal {
     display: block !important;
-    width: 80px !important;
-    margin-bottom: 0.5rem !important;
+    width: 70px !important;
+    margin-bottom: 0.4rem !important;
     margin-top: 0 !important;
   }
 }
