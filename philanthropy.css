@@ -89,8 +89,8 @@
 
 @media (max-width: 480px) {
     .professional-section h1 {
-        /* smaller so the title fits better on most phones */
-        font-size: 0.75rem;
+        /* Match Brotherhood page sizing for consistency */
+        font-size: 1.3rem;
         padding: 0 0.5rem;
     }
 
@@ -106,8 +106,8 @@
 
 @media (max-width: 360px) {
     .professional-section h1 {
-        /* tighten on very small devices */
-        font-size: 0.7rem;
+        /* Match Brotherhood page sizing for consistency */
+        font-size: 1.1rem;
         padding: 0 0.5rem;
     }
 }
