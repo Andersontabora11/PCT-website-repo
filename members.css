@@ -1,8 +1,9 @@
 /* Responsive breakpoints for mobile and tablet, matching index.html */
 @media (max-width: 768px) {
     .members-section {
-        min-height: 60vw;
-        height: auto;
+        min-height: 40vw;
+        height: 40vw;
+        max-height: 60vw;
         padding: 1.2rem;
         background-size: cover !important;
         background-position: center center !important;
@@ -11,14 +12,17 @@
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         text-align: center;
         position: relative;
     }
     .members-section h1 {
-        font-size: 2.2rem;
+        font-size: clamp(1.5rem, 8vw, 2.0rem);
         margin-bottom: 0.5rem;
+        background: rgba(0,0,0,0.15);
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
     }
     .members-intro {
         padding: 1.2rem 1rem;

@@ -387,10 +387,10 @@ nav .dropdown a:hover {           /* ADD */
 
 @media (max-width: 600px) {
   .title-section {
-    /* Keep the image visible and centered; text can resize/stack as needed */
-    min-height: 100vh !important;
-    max-height: 100vh !important;
-    height: 100vh !important;
+    /* Apply "zoomed out" pattern matching nationals/leadership pages */
+    min-height: 40vw !important;
+    max-height: 60vw !important;
+    height: 40vw !important;
     padding-top: 5vh !important;
     padding-bottom: 2vh !important;
     justify-content: center !important;
@@ -400,8 +400,8 @@ nav .dropdown a:hover {           /* ADD */
   }
   .title-section img.reveal {
     display: block !important;
-    width: 120px !important;
-    margin-bottom: 1rem !important;
+    width: 80px !important;
+    margin-bottom: 0.5rem !important;
     margin-top: 0 !important;
   }
 }
@@ -441,13 +441,19 @@ nav .dropdown a:hover {           /* ADD */
 
 @media (max-width: 600px) {
   .title-section h1 {
-    font-size: clamp(1.6rem, 9.5vw, 2.4rem);
+    font-size: clamp(1.2rem, 7vw, 1.8rem);
     margin-top: 0 !important;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
+    background: rgba(0,0,0,0.15);
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
   }
   .title-section h2 {
-    font-size: clamp(1rem, 4.8vw, 1.4rem);
+    font-size: clamp(0.8rem, 4vw, 1.1rem);
     margin-top: 0;
+    background: rgba(0,0,0,0.15);
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
   }
 }
 
