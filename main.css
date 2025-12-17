@@ -75,6 +75,9 @@ nav {
 }
 
 @media (max-width: 900px) {
+  nav {
+    z-index: 2500 !important; /* ensure navbar is above content */
+  }
   .navbar-toggle {
     display: flex;
     position: fixed;
