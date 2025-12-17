@@ -105,3 +105,39 @@
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
+/* Intro text section styling (matches Professionalism page) */
+.professional-intro {
+    margin-top: 2rem;
+    padding: clamp(0.6rem, 2.5vw, 1.2rem) 6vw;
+    max-width: 1100px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(1.05rem, 1.9vw, 1.45rem);
+    line-height: 1.6;
+    background: none;
+}
+
+.feature-text {
+    flex: 1;
+    text-align: center;
+    font-size: clamp(1.12rem, 1.8vw, 1.36rem);
+    line-height: 1.7;
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+/* Mobile responsiveness for intro text */
+@media (max-width: 768px) {
+    .professional-intro {
+        padding: 1.2rem 1rem;
+        font-size: 1rem;
+        max-width: 98vw;
+    }
+    .feature-text {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 0 1rem;
+    }
+}
